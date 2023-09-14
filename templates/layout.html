@@ -19,9 +19,10 @@
         }
         nav {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
             background-color: black;
-            align-items: flex-end;
-
         }
         nav a {
             color: aliceblue;
@@ -94,11 +95,12 @@
         }
 
     .content h3 {
-        color: rgb(242, 249, 216);
+        color: rgb(135, 178, 181);
         font-size: 50px;
         margin-top: 40px;
         padding-top: 10px;
         margin-left: -140px;
+        font-weight: 100px;
     }
     @media ( max-width:500px ) {
         .title  {
@@ -121,7 +123,10 @@
 </head>
 <body>
     <nav>
-        <a href="/">Home</a> <a href="/about">About Me</a>  <a href="/contact">Contact Us</a>
+        <a href="/">Home</a> 
+        <a href="#">Work</a>
+        <a href="/about">About Me</a>  
+        <a href="/contact">Contact</a>
     </nav>
     {% block body %}
 
