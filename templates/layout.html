@@ -57,6 +57,15 @@
         .title_items {
             text-align: center;
             padding: 20px 10px;
+            opacity: 0.01;
+            transform: translateY(30px);
+            animation: moveup 1.0s linear forwards;
+        }
+        @keyframes moveup {
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
         }
         .title_items h1, .title_items h2 {
             font-size: 10vw;
@@ -69,44 +78,34 @@
             font-size: 4.73vw;
             margin-top: -2%;
         }
-        .title_items p {
-            font-size: 2vw;
-        }
         .title_items img {
-            width: 50vw;
-        }
-        .title_ani {
-            opacity: 0.01;
-            transform: translateY(30px);
-            animation: moveup 1.0s linear forwards;
+            width: 46vw;
+            animation-delay: 2s;
         }
         .title_items_role {
-            width: 35vw;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-            margin-left: 13%;
-            margin-top: 2%;
+            margin: 8%;
         }
         .title_items_role p {
-            font-size: 1.4vw;
-            border: 20px rgb(255, 255, 255);
-            background-color: #ff0707;
-            border: 20px rgb(255, 255, 255);
+            font-size: 1.2vw;
+            margin: 20%;
+            margin-top: -8%;
+            line-height: 1.6vw;
         }
-
-        @keyframes moveup {
-            100% {
-                opacity: 1;
-                transform: translateY(0px);
-            }
+        .title_items_quote p {
+            font-size: 1vw;
+            padding: 10%;
+            margin-top: -16%;
+            line-height: 2vw;
         }
 
         .expertis {
             width: 90%;
-            margin-top: 5%;
+            margin-top: -8%;
             margin-left: 4%;
             padding: 0 8%;
-            background-color: rgba(18, 255, 176, 0.71);
+            background-color: rgba(9, 9, 9, 0.71);
             border-top-right-radius: 30%;
             border-bottom-left-radius: 30%;
         }
@@ -131,60 +130,26 @@
         }
         .expertis_child {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         }
 
         .expertis_items {
             text-align: center;
             padding: 20px 10px;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 1.6vw;
             cursor: pointer;
             background: transparent;
         }
 
         .expertis_items i {
-            font-size: 40px;
+            font-size: 5vw;
             margin-bottom: 10px;
-            color: rgb(190, 19, 190);
+            color: rgb(230, 71, 230);
         }
-        @media (max-width:540px) {
-            .expertis {
-                width: 90%;
-                margin-top: 5%;
-                margin-left: 4%;
-                padding: 0 8%;
-                border-top-right-radius: 20%;
-                border-bottom-left-radius: 20%;
-            }
-            .expertis h1 {
-                font-size: 10vw;
-                color: black;
-                padding-top: 10%;
-                margin-bottom: 30px;
-                font-weight: 600px;
-                position: relative;
-            }
-            .expertis h1::after {
-                width: 10vw;
-            }
+        @media (max-width:500px) {
             .expertis_child {
                 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
-            .expertis_items {
-                padding: 20px 10px;
-                border-radius: 5px;
-                font-size: 5vw;
-            }
-            .expertis_items i {
-                font-size: 40px;
-                margin-bottom: 10px;
-                color: rgb(190, 19, 190);
-            }
-            .expertis_items h2 {
-                font-size: 10px;
-                margin-bottom: 10px;
-                color: rgb(190, 19, 190);
             }
         }
     </style>
