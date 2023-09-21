@@ -111,7 +111,7 @@
             border-bottom-left-radius: 20%;
         }
 
-        .expertis h1 {
+        .expertis h1, .design h1 {
             text-align: center;
             padding-top: 10%;
             margin-bottom: 60px;
@@ -135,7 +135,7 @@
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         }
 
-        .expertis_items {
+        .expertis_items{
             text-align: center;
             padding: 20px 10px;
             border-radius: 5px;
@@ -149,9 +149,40 @@
             margin-bottom: 10px;
             color: rgb(255, 97, 255);
         }
+
+        .design {
+            width: 92%;
+            margin-left: 3.6%;
+        }
+        .design_child {
+            margin: 2%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        }
+
+        .design_items {
+            text-align: center;
+            font-size: 2vw;
+        }
+
+        .design_items img {
+            width: 42.5vw;
+        }
+        .design_see_more {
+            text-align: right;
+            margin: 2%;
+            padding: 2%;
+            color: aquamarine;
+        }
         @media (max-width:500px) {
             .expertis_child {
                 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+
+        @media (max-width:500px) {
+            .design_child {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
         }
     </style>
@@ -161,6 +192,7 @@
     <nav>
         <a href="/">Home</a>
         <a href="#">Work</a>
+        <a href="/canva">Canva</a>
         <a href="/about">About Me</a>
         <a href="/contact">Contact</a>
     </nav>
