@@ -1,6 +1,117 @@
 {% extends 'layout.html'%}
 
-{% block body %}
+{% block head %}
+<style>
+    .about {
+        width: 100vw;
+        text-align: center;
+    }
 
+    .about_image img {
+        width: 40vw;
+        margin-top: 4%;
+        opacity: .76;
+    }
+
+    .about_text {
+        margin: 20px; 
+        text-align: left; 
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        margin-left: 22%;
+        margin-right: 22%;
+    }
+
+    .about_text h2 {
+        font-size: 1.8vw; 
+        color: #ffffff; 
+        margin-top: 20px; 
+        font-weight: 100;
+    }
+
+    .about_text p {
+        font-size: 1.2vw; 
+        color: #e3e3e3; 
+        line-height: 1.5; 
+        margin-bottom: 20px; 
+        margin-top: 2%;
+    }
+
+    @media (max-width:500px) {
+        .about_image img {
+            width: 85vw;
+        }
+
+        .about_text h2 {
+            font-size: 4vw;
+        }
+
+        .about_text p {
+            font-size: 3.5vw;
+        }
+
+        .about_text {
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="about">
+    <div class="about_image">
+        <img id="scrollImage" src="/static/about.jpg" alt="">
+    </div>
+    <div class="about_text">
+        <h2>Your Time Is Precious To Me</h2>
+
+        <p>I am thankful to you that you’re here with your precious time to know me. I hope it will run longer than now.
+            I am Prasun Bhattacharyay, a Digital marketing project manager. Side by side, I also use the Canva platform
+            very well. I am working with multiple brands for now as a marketing manager & ads expert. </p>
+
+        <h2>Engineer By Paper, Marketer By Actions</h2>
+
+        <p>From an engineer to a digital marketer, the journey was full of struggle, less sleep nights & lessons. I
+            started working as a Content writer & started growing myself day by day. I put my 4 hours daily into
+            learning new things about the online marketing procedure. </p>
+
+        <h2>Basics Make Me Strong For Long</h2>
+
+        <p>Firstly, I learned about social media management & its basics. I go through each & every detail of it. I
+            never leave any aspect of chances. How it grows a business how to generate leads everything. Then I helped
+            one of my uncle’s businesses to grow online. It’s a food channel, & I learn about the needs of people & why
+            they will stick to us for the long term. But I want to learn more…</p>
+
+        <h2>I Note Down Knowledge To Recall It Timely</h2>
+
+        <p>Then I connect with a growing Digital Marketing agency & serve them all things about social media. But I am
+            not satisfied not about my knowledge; I crave more knowledge of it. I took a course in overall Digital
+            Marketing & practiced it with my recent clients daily. I enhance my expertise to the next level. </p>
+
+        <h2>Some Helps Never Be Forgotten</h2>
+
+        <p>As a marketing manager of Digital Agency, I am gaining all kind of businesses & their growing tricks. I note
+            down each & every point of learning. That’s helped me better & prepare for future applications. </p>
+
+        <h2>Connection With Trends Making Me Better Day By Day</h2>
+
+        <p>Now, I am learning the Full-fledged AI that creates differences in the DIGITAL MARKETING field. I will learn
+            & apply it to my work; it will save my & my client’s time for growth. </p>
+    </div>
+</div>
+<script>
+    var image = document.getElementById("scrollImage");
+
+    function updateImageOpacity() {
+        var scrollPosition = window.scrollY;
+        var maxScroll = 400;
+        var opacity = 1 - (scrollPosition / maxScroll);
+        opacity = Math.max(0, Math.min(1, opacity));
+        image.style.opacity = opacity.toString();
+    }
+
+    window.addEventListener("scroll", updateImageOpacity);
+    updateImageOpacity();
+</script>
 
 {% endblock %}
