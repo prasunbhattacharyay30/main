@@ -151,6 +151,77 @@
 
     }
 
+
+    .ani_button {
+        display: flex;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+       
+    }
+
+    .ani_btn {
+        position: relative;
+        width: 20vw;
+        
+        display: flex;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+        background-color: rgb(183, 0, 255);
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 2px 2px #2d2d2d;
+    }
+
+    .ani_btn p {
+        color: #f6f1f1;
+        font-size: 2vw;
+        margin: 4%;
+        z-index: 2;
+        padding: 4%;
+    }
+    @media (max-width:500px) {
+
+        .ani_btn {
+            width: 40vw;
+        }
+        .ani_btn p {
+            font-size: 4vw;
+        }
+
+        .ani_btn::after{
+            inset: 2px;
+        }
+    }
+    .ani_btn::before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 80%;
+        background: linear-gradient(#00ccff, #d500f9);
+        animation: rotate 2s linear infinite;
+
+    }
+
+    .ani_btn::after{
+        content: '';
+        position: absolute;
+        background-color: #080808;
+        inset: 3px;
+        border-radius: 6px;
+    }
+
+    @keyframes rotate {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    
     .btn:hover {
         background-color: #0056b3;
         color: #fff;
@@ -158,13 +229,6 @@
 
     @import url(http://fonts.googleapis.com/css?family=Open+Sans);
     @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-
-    h1 {
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        color: #333;
-        margin-top: 150px;
-    }
 
     .accordion {
         width: 100%;
@@ -327,16 +391,21 @@
             <p class="p2"> <span> &#10052 </span> Is it stagnating <span> &#10068 </span></p>
             <p class="p3"> <span> &#10052 </span> Are your campaigns underperforming <span> &#10068 </span></p>
             <p class="start"><i> It's time for a fresh start.</i></p>
-            <div class="button">
+            <!-- <div class="button">
                 <button class="btn">Need Consultation</button>
                 <button class="btn">Need Service</button>
                 <button class="btn" style="background-color: #0056b3; color: #fff;">Learn About Marketing</button>
-            </div>
+            </div> -->
         </div>
     </div>
-
-
 </section>
+
+<div class="ani_button">
+    <div class="ani_btn">
+        <p>Call Me Now</p>
+    </div>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const section1Items = document.querySelector('.section_1_items');
