@@ -1,5 +1,131 @@
 {% extends 'layout.html'%}
+{% block head %}
+<style>
+    .section_1_items p {
+        position: relative;
+        font-size: 2vw;
+    }
+    
+    .section_1_items.animate h1 {
+        animation: h1tag 6s;
+    }
 
+    @keyframes h1tag {
+        0% {
+            transform: translateX(-100vw);
+        }
+        50% {
+            transform: translateX(50px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .section_1_items.animate .p1 {
+        animation: ptag 3s;
+    }
+
+    .section_1_items.animate .p2 {
+        animation: ptag 4s;
+    }
+    .section_1_items.animate .p3 {
+        animation: ptag 5s;
+    }
+    @keyframes ptag {
+        0% {
+            transform: translateX(100vw);
+        }
+        50% {
+            transform: translateX(50px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .section_1_items.animate h2  {
+        color: #fff;
+        font-size: 4vw;
+        padding: 2%;
+        opacity: 1;
+        animation: h2r 8s;
+    }
+
+    @keyframes h2r {
+        0% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+
+        20% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+        70% {
+            transform: translateX(30vw);
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    }
+    
+
+    .section_1_items.animate .button {
+        animation: moveLeftRight 6s;
+    }
+
+
+    
+    @keyframes moveLeftRight {
+        0% {
+            transform: translateX(-100vw);
+        }
+        50% {
+            transform: translateX(50px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+    .section_1 {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .section_1_items h1 {
+        font-size: 3vw;
+        color: papayawhip;
+        font-weight: 600;
+    }
+
+    .section_1_items p {
+        margin-left: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .btn {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 2%;
+        border: none;
+        border-radius: 5px;
+        margin-right: 20px;
+        cursor: pointer;
+        font-size: 1vw;
+        
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+</style>
+{% endblock %}
 {% block body %}
 <div class="title">
     <div class="title_child">
@@ -24,6 +150,36 @@
     </div>
 </div>
 
+<section class="section_1">
+    <div class="section_1_child">
+        <div class="section_1_items">
+            <h1>I will help make your brand stand out With a proven strategy, we'll boost your ROI, brand reach, and identity.</h1>
+            <p class="p1"> <span> &#10052 </span>  Where is your business now <span> &#10068 </span></p>
+            <p class="p2"> <span> &#10052 </span> Is it stagnating <span> &#10068 </span></p>
+            <p class="p3"> <span> &#10052 </span> Are your campaigns underperforming <span> &#10068 </span></p>
+            <h2 class="start"> <span class="h2tag">It's time for a fresh start.</span></h2>
+            <div class="button">
+                <button style="margin-left: 4%;" class="btn">Need Consultation</button>
+                <button class="btn">Need Service</button>
+                <button class="btn">Learn About Marketing</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const section1Items = document.querySelector('.section_1_items');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    section1Items.classList.add('animate');
+                    observer.unobserve(section1Items);
+                }
+            });
+        });
+        observer.observe(section1Items);
+    });
+</script>
 <div class="design">
     <h1>My Canva Design Sample</h1>
     <div class="design_child">
@@ -39,6 +195,7 @@
     </div>
     
 </div>
+
 
 <div class="expertis">
     <h1>Expertis</h1>
@@ -77,4 +234,6 @@
         </div>
     </div>
 </div>
+
+<span class="h2r" style="background-color: chartreuse; color:darkviolet; padding-left: 4px; border-radius: 30%; margin-right: 4px;" > &#10004 </span> 
 {% endblock %}
