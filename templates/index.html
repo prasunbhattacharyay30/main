@@ -325,17 +325,31 @@
     }
 
     .section_3 {
-        padding: 50px;
-        overflow: hidden; 
-      }
-  
-     
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
       .section_3_items {
-        font-size: 24px;
+        border: 2px solid #4d1044d0; 
         text-align: center;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s, transform 1s;
+        margin: 4%;
+        padding: 4%;
+        border-radius: 2vw;
+      }
+
+      .section_3_items img {
+        width: 30vw;
+      }
+
+      .section_3_items p {
+        font-size: 3vw;
+        text-align: justify;
+      }
+
+      .section_3_items h1 {
+        font-size: 4vw;
+        font-weight: 400;
+        margin-bottom: 4%;
       }
 </style>
 {% endblock %}
@@ -429,6 +443,7 @@
 <div class="section_3" id="section_3">
     <div class="section_3_items">
         <h1>GROW YOUR REVENUE & ROI!</h1>
+        <img src="/static/section_3.webp" alt="">
         <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
             multiple challenges while operating a business or a channel with the help of digital sources. We have to
             take care of initial matters that you have to take care of.
@@ -444,19 +459,10 @@
             analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What & why"
             then it will be easy to read a business analysis.
         </p>
-        <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
-        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new reach. For each & every idea, need some specific actions. 
-
-            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept. While creating a procedure program, I always keep in mind what is doable or not. 
-            
-            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines their ability to complete a task. We have to share tasks as per ability, not as quantity. 
-            
-            I have worked with multiple teams & members. I always know what they can put into our vision.
-            
-        </p>
     </div>
     <div class="section_3_items">
         <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
+        <img src="/static/section_3.webp" alt="">
         <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new reach. For each & every idea, need some specific actions. 
 
             When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept. While creating a procedure program, I always keep in mind what is doable or not. 
@@ -469,6 +475,7 @@
     </div>
     <div class="section_3_items">
         <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
+        <img src="/static/section_3.webp" alt="">
         <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of firms, businesses or profiles can grow. In that case, you need some consultation to understand digital resources. 
 
             Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing through online platforms is a new thing to many businessmen. But my consultation will help to grow the business without second thoughts or misuse of their hard money. 
@@ -481,25 +488,6 @@
     </div>
 </div>
 
-<script>
-    const section = document.getElementById('section_3');
-    const content = document.querySelector('.section_3_items');
-
-    function handleScroll() {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-  
-        if (sectionTop < windowHeight / 2) {
-          content.style.opacity = '1';
-          content.style.transform = 'translateY(0)';
-        } else {
-          content.style.opacity = '0'; // Reset opacity if section is not in view
-          content.style.transform = 'translateY(20px)'; // Reset transform
-        }
-      }
-  
-      window.addEventListener('scroll', handleScroll);
-</script>
 <div class="design">
     <h1>My Canva Design Sample</h1>
     <div class="design_child">
