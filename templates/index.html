@@ -163,23 +163,23 @@
     .ani_btn {
         position: relative;
         width: 20vw;
-
         display: flex;
         justify-content: center;
         -ms-align-items: center;
         align-items: center;
-        background-color: rgb(183, 0, 255);
+        background-color: #b700ff;
         border-radius: 6px;
         overflow: hidden;
-        box-shadow: 2px 2px #2d2d2d;
+        box-shadow: 3px 3px 12px rgba(247, 71, 250, 0.904), 0px 8px 16px rgba(0, 0, 0, 0.6);
     }
 
     .ani_btn p {
-        color: #f6f1f1;
+        color: #ffffff;
         font-size: 2vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         margin: 4%;
         z-index: 2;
-        padding: 4%;
+        padding: 3%;
     }
 
     @media (max-width:500px) {
@@ -193,17 +193,17 @@
         }
 
         .ani_btn::after {
-            inset: 2px;
+            inset: 1px;
         }
     }
 
     .ani_btn::before {
         content: '';
         position: absolute;
-        width: 300px;
-        height: 300px;
-        margin-bottom: 80%;
-        background: linear-gradient(#00ccff, #d500f9);
+        width: 100px;
+        height: 230px;
+        margin-bottom: -80%;
+        background: linear-gradient( #b700ff, #b700ff, #ff33cf, #ff33cf, #ff33cf, #ff5733, #ff33cf);
         animation: rotate 2s linear infinite;
 
     }
@@ -212,7 +212,8 @@
         content: '';
         position: absolute;
         background-color: #080808;
-        inset: 3px;
+        inset: 2px;
+        border: 1px solid white;
         border-radius: 6px;
     }
 
@@ -222,7 +223,7 @@
         }
 
         to {
-            transform: rotate(360deg);
+            transform: rotate(260deg);
         }
     }
 
@@ -374,7 +375,6 @@
                 <a href="tel:+919563432724">
                     <div class="ani_btn">
                         <p>Call Me Now</p>
-
                     </div>
                 </a>
             </div>
@@ -396,10 +396,7 @@
             <p class="start"><i> It's time for a fresh start.</i></p>
         </div>
     </div>
-</section>
-
-
-
+</section> 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const section1Items = document.querySelector('.section_1_items');
