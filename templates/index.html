@@ -1,5 +1,6 @@
 {% extends 'layout.html'%}
 {% block head %}
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <style>
     .section_1_items p {
         position: relative;
@@ -131,7 +132,8 @@
         background-color: #b300b3;
         border-radius: 6px;
         overflow: hidden;
-        box-shadow: 3px 3px 20px rgba(21, 21, 21, 0.904), 0px 8px 16px rgba(7, 7, 7, 0.6);
+        box-shadow: 3px 3px 20px rgba(54, 54, 54, 0.904), 0px 8px 16px rgba(48, 48, 48, 0.6);
+        backdrop-filter: blur(5px);
     }
 
     .ani_btn p {
@@ -324,33 +326,47 @@
         }
     }
 
-    .section_3 {
+
+
+    .section_3,
+    .section_4 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
-      .section_3_items {
-        border: 2px solid #4d1044d0; 
+    .section_3_items {
+        border: 2px solid #4d1044d0;
         text-align: center;
         margin: 4%;
         padding: 4%;
         border-radius: 2vw;
-      }
+    }
 
-      .section_3_items img {
+    .section_3_items img {
         width: 30vw;
-      }
+    }
 
-      .section_3_items p {
+    .section_3_items p,
+    .section_4_items p {
         font-size: 3vw;
         text-align: justify;
-      }
+    }
 
-      .section_3_items h1 {
+    .section_3_items h1,
+    .section_4_child h2 {
         font-size: 4vw;
         font-weight: 400;
         margin-bottom: 4%;
-      }
+    }
+
+    .section_4_child {
+        margin: 6%;
+        padding: 4%;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
+        backdrop-filter: blur(1px);
+    }
 </style>
 {% endblock %}
 {% block body %}
@@ -463,28 +479,75 @@
     <div class="section_3_items">
         <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
         <img src="/static/section_3.webp" alt="">
-        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new reach. For each & every idea, need some specific actions. 
+        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new
+            reach. For each & every idea, need some specific actions.
 
-            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept. While creating a procedure program, I always keep in mind what is doable or not. 
-            
-            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines their ability to complete a task. We have to share tasks as per ability, not as quantity. 
-            
+            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept.
+            While creating a procedure program, I always keep in mind what is doable or not.
+
+            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines
+            their ability to complete a task. We have to share tasks as per ability, not as quantity.
+
             I have worked with multiple teams & members. I always know what they can put into our vision.
-            
+
         </p>
     </div>
     <div class="section_3_items">
         <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
         <img src="/static/section_3.webp" alt="">
-        <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of firms, businesses or profiles can grow. In that case, you need some consultation to understand digital resources. 
+        <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of firms,
+            businesses or profiles can grow. In that case, you need some consultation to understand digital resources.
 
-            Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing through online platforms is a new thing to many businessmen. But my consultation will help to grow the business without second thoughts or misuse of their hard money. 
-            
-            Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are investing the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel "Satisfied."
-            
-            Just book a free consultation with me & understand how things are working nowadays. These 15 minutes give you an idea about "How to deal with Digital marketing approach."
-            
+            Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing through
+            online platforms is a new thing to many businessmen. But my consultation will help to grow the business
+            without second thoughts or misuse of their hard money.
+
+            Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are investing
+            the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel "Satisfied."
+
+            Just book a free consultation with me & understand how things are working nowadays. These 15 minutes give
+            you an idea about "How to deal with Digital marketing approach."
+
         </p>
+    </div>
+</div>
+
+<div class="section_4">
+    <div class="section_4_child">
+        <div class="card">
+            <lottie-player src="https://lottie.host/de01d656-99b1-4d3c-a8ff-1933aa7faf41/6aQtTYpzOS.json"
+                background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal" loop
+                autoplay></lottie-player>
+            <h2>Social Media Marketing</h2>
+            <p>
+                Maximize your online presence. My social media marketing strategies will help you stand out and drive
+                business growth smartly.
+            </p>
+        </div>
+    </div>
+    <div class="section_4_child">
+        <div class="card">
+            <lottie-player src="https://lottie.host/a78de5f9-47ad-4a1d-a06b-af6e89d437b3/vzQq2dE5K6.json"
+                background="transparent" speed="1" style="width: 30vw; padding: 4%; "direction="1" mode="normal" loop
+                autoplay></lottie-player>
+            <h2>Digital Marketing</h2>
+            <p>
+                I am here to upgrade the online performances with data-driven strategies. Let's enhance your brand and
+                drive success.
+            </p>
+        </div>
+    </div>
+    <div class="section_4_child">
+        <div class="card">
+            <lottie-player src="https://lottie.host/5eca545b-2cf1-44ea-8a4e-a43beaa97c64/OO9nun21cK.json"
+                background="transparent" speed="1" style="width: 30vw; padding: 4%;" direction="1" mode="normal" loop
+                autoplay></lottie-player>
+            <h2>Canva Design</h2>
+            <p>
+                I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
+                designs.
+            </p>
+        </div>
     </div>
 </div>
 
