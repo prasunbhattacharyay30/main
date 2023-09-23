@@ -164,7 +164,7 @@
         width: 100px;
         height: 230px;
         margin-bottom: -80%;
-        background: linear-gradient( #b300b357, #b300b349, #b300b356, #b300b37b, #ff33cf32, #ff5733, #ff33cf);
+        background: linear-gradient(#b300b357, #b300b349, #b300b356, #b300b37b, #ff33cf32, #ff5733, #ff33cf);
         animation: rotate 2s linear infinite;
 
     }
@@ -174,9 +174,9 @@
         position: absolute;
         background-color: #080808;
         inset: 2px;
-        border-width: 1px; 
-        border-style: dotted solid; 
-        border-color: white; 
+        border-width: 1px;
+        border-style: dotted solid;
+        border-color: white;
         border-radius: 8px;
     }
 
@@ -323,6 +323,20 @@
             transition: none;
         }
     }
+
+    .section_3 {
+        padding: 50px;
+        overflow: hidden; 
+      }
+  
+     
+      .section_3_items {
+        font-size: 24px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s, transform 1s;
+      }
 </style>
 {% endblock %}
 {% block body %}
@@ -358,7 +372,7 @@
             <p class="start"><i> It's time for a fresh start.</i></p>
         </div>
     </div>
-</section> 
+</section>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const section1Items = document.querySelector('.section_1_items');
@@ -374,39 +388,113 @@
     });
 </script>
 
+<div class="section_3" id="section_3">
+    <div class="section_3_items">
+        <h1>GROW YOUR REVENUE & ROI!</h1>
+        <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
+            multiple challenges while operating a business or a channel with the help of digital sources. We have to
+            take care of initial matters that you have to take care of.
+
+            First, clarify your goal outline. I always take care of goals on a serious note. Without destination
+            identification, we may not make a suitable path, or we fail to analyze our process!
+
+            When it comes to strategy, by driving it properly, businesses handle the point of success. I take an
+            additional period to make the proper strategy for our path & after getting effects, I follow the best thing
+            for a business to drive more sales or growth.
+
+            After the goal & making strategy, the analysis & the action to it are more than essential. The proper
+            analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What & why"
+            then it will be easy to read a business analysis.
+        </p>
+        <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
+        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new reach. For each & every idea, need some specific actions. 
+
+            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept. While creating a procedure program, I always keep in mind what is doable or not. 
+            
+            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines their ability to complete a task. We have to share tasks as per ability, not as quantity. 
+            
+            I have worked with multiple teams & members. I always know what they can put into our vision.
+            
+        </p>
+    </div>
+    <div class="section_3_items">
+        <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
+        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new reach. For each & every idea, need some specific actions. 
+
+            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept. While creating a procedure program, I always keep in mind what is doable or not. 
+            
+            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines their ability to complete a task. We have to share tasks as per ability, not as quantity. 
+            
+            I have worked with multiple teams & members. I always know what they can put into our vision.
+            
+        </p>
+    </div>
+    <div class="section_3_items">
+        <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
+        <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of firms, businesses or profiles can grow. In that case, you need some consultation to understand digital resources. 
+
+            Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing through online platforms is a new thing to many businessmen. But my consultation will help to grow the business without second thoughts or misuse of their hard money. 
+            
+            Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are investing the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel "Satisfied."
+            
+            Just book a free consultation with me & understand how things are working nowadays. These 15 minutes give you an idea about "How to deal with Digital marketing approach."
+            
+        </p>
+    </div>
+</div>
+
+<script>
+    const section = document.getElementById('section_3');
+    const content = document.querySelector('.section_3_items');
+
+    function handleScroll() {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+  
+        if (sectionTop < windowHeight / 2) {
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+        } else {
+          content.style.opacity = '0'; // Reset opacity if section is not in view
+          content.style.transform = 'translateY(20px)'; // Reset transform
+        }
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+</script>
 <div class="accordion">
     <ul>
         <li style="border-color: rgb(219, 213, 255);">
-            <div> 
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <p class="client">Client name goes here</p>
-                 </div>
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p class="client">Client name goes here</p>
+            </div>
         </li>
         <li style="border-color: rgb(234, 255, 213);">
-            <div> 
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                 </div>
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
         </li>
         <li style="border-color: rgb(255, 213, 213);">
-            <div> 
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                 </div>
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
         </li>
         <li style="border-color: rgb(255, 182, 244);">
             <div>
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                 </div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
         </li>
         <li>
-            <div> 
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
         </li>
     </ul>
 </div>
