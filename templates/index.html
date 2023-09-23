@@ -240,17 +240,17 @@
 
     .accordion {
         width: 100%;
-        max-width: 1080px;
+        max-width: 90vw;
         height: 350px;
         overflow: hidden;
         margin: 50px auto;
     }
 
     .accordion ul {
-        width: 100%;
+        width: 90%;
         display: table;
         table-layout: fixed;
-        margin: 0;
+        margin: 4%;
         padding: 0;
     }
 
@@ -263,10 +263,9 @@
         background-repeat: no-repeat;
         background-position: center center;
         transition: all 500ms ease;
-        background-color: black;
         border-style: solid;
-        border-color: red;
-        border-width: 0px 0px 0px 3px;
+        border-color: rgba(158, 255, 219, 0.705);
+        border-width: 0px 0px 0px 2px;
     }
 
     .accordion ul li div {
@@ -342,7 +341,7 @@
         transform: translateX(0);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 100px) {
 
         body {
             margin: 0;
@@ -417,7 +416,7 @@
 
 <div class="accordion">
     <ul>
-        <li>
+        <li style="border-color: rgb(219, 213, 255);">
             <div> <a href="#">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -425,19 +424,19 @@
                     <p class="client">Client name goes here</p>
                 </a> </div>
         </li>
-        <li>
+        <li style="border-color: rgb(234, 255, 213);">
             <div> <a href="#">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </a> </div>
         </li>
-        <li>
+        <li style="border-color: rgb(255, 213, 213);">
             <div> <a href="#">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </a> </div>
         </li>
-        <li>
+        <li style="border-color: rgb(255, 182, 244);">
             <div> <a href="#">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
