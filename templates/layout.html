@@ -16,10 +16,24 @@
         }
 
         body {
-            
-            background: linear-gradient(240deg, black, #810081b6, rgba(0, 0, 0, 0.281)) black;
+            background: linear-gradient(140deg, black, #810081b6, rgba(0, 0, 0, 0.281)) black;
             background-color: black;
             width: 100%;
+            animation: color 8s ease-in-out infinite;
+            background-size: 200% 100% ;
+        }
+
+        @keyframes color {
+
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
         }
 
         nav {
@@ -71,12 +85,13 @@
             }
         }
         .title_items h1, .title_items h2 {
-            font-size: 3vw;
+            font-size: 3.2vw;
             color: aliceblue;
             margin-top: 15%;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-weight: 600;
-            text-align: justify;
+            font-family:  Intertight Variablefont Wght, sans-serif;
+            font-weight: 400;
+            text-align: left;
+            text-transform: capitalize;
         }
         .title_items h2 {
             font-size: 4.73vw;
