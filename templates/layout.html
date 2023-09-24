@@ -17,11 +17,11 @@
 
         body {
             background-color: black;
-            background: linear-gradient(280deg,  black, rgb(34, 0, 31));
+            background: linear-gradient(280deg, black, rgb(34, 0, 31));
             width: 100%;
-           /* animation: color 8s ease-in-out infinite; 
+            /* animation: color 8s ease-in-out infinite; 
             background-size: 400% 100% ; */
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
 
         @keyframes color {
@@ -29,9 +29,11 @@
             0% {
                 background-position: 0 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0 50%;
             }
@@ -68,10 +70,13 @@
             width: 100%;
             margin-top: 10%;
         }
-        .title_child, .section_3 {
+
+        .title_child,
+        .section_3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         }
+
         .title_items {
             text-align: center;
             padding: 20px 10px;
@@ -79,40 +84,48 @@
             transform: translateY(30px);
             animation: moveup 1.0s linear forwards;
         }
+
         @keyframes moveup {
             100% {
                 opacity: 1;
                 transform: translateY(0px);
             }
         }
-        .title_items h1, .title_items h2 {
+
+        .title_items h1,
+        .title_items h2 {
             font-size: 3.2vw;
             color: aliceblue;
             margin-top: 15%;
-            font-family:  Intertight Variablefont Wght, sans-serif;
+            font-family: Intertight Variablefont Wght, sans-serif;
             font-weight: 400;
             text-align: left;
             text-transform: capitalize;
         }
+
         .title_items h2 {
             font-size: 4.73vw;
             margin-top: -2%;
         }
+
         .title_items img {
             width: 46vw;
             animation-delay: 2s;
         }
+
         .title_items_role {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
             margin: 8%;
         }
+
         .title_items_role p {
             font-size: 1.6vw;
             margin: 20%;
             margin-top: -8%;
             line-height: 1.8vw;
         }
+
         .title_items_quote p {
             font-size: 1.4vw;
             padding: 10%;
@@ -126,12 +139,13 @@
             margin-left: 4%;
             padding: 0 8%;
             background-color: rgba(9, 9, 9, 0.71);
-            border: 2px solid #ffffff; 
+            border: 2px solid #ffffff;
             border-top-right-radius: 20%;
             border-bottom-left-radius: 20%;
         }
 
-        .expertis h1, .design h1 {
+        .expertis h1,
+        .design h1 {
             text-align: center;
             padding-top: 10%;
             margin-bottom: 60px;
@@ -149,13 +163,14 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .expertis_child {
             margin-top: -3%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         }
 
-        .expertis_items{
+        .expertis_items {
             text-align: center;
             padding: 20px 10px;
             border-radius: 5px;
@@ -174,7 +189,9 @@
             width: 92%;
             margin-left: 3.6%;
         }
-        .design_child {
+
+        .design_child,
+        .footer {
             margin: 2%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -188,12 +205,14 @@
         .design_items img {
             width: 42.5vw;
         }
+
         .design_see_more {
             text-align: right;
             margin: 2%;
             padding: 2%;
             color: aquamarine;
         }
+
         @media (max-width:500px) {
             .expertis_child {
                 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -204,6 +223,15 @@
             .design_child {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
+        }
+        .foot {
+            margin: 4%;
+        }
+        .foot li {
+            padding: 1%;
+        }
+        .foot h4 {
+            color: #fff;
         }
     </style>
     {% block head %}{% endblock %}
@@ -220,6 +248,50 @@
     {% block body %}
 
     {% endblock %}
+
+    <footer>
+        <div class="footer">
+            <div class="foot">
+                <h4>For Biz Owners</h4>
+                <ul>
+                    <li><a href="#">Work With Me</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Get To Know Me</a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <h4>For Freelancers</h4>
+                <ul>
+                    <li><a href="#">Free Roadmap For Freelancers</a></li>
+                    <li><a href="#">Freelance 101 Academy</a></li>
+                    <li><a href="#">Masterclasses</a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <h4>For Everyone</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Awesome Emails (Newsletter)</a></li>
+                    <li><a href="#">Saheli's Books Club</a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Access Your Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="margin: 4%;">© 2023 Prasun Bhattacharyay. All right reserved.</p>
+    </footer>
 </body>
 
 </html>
