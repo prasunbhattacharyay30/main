@@ -132,15 +132,16 @@
         background-color: #b300b3;
         border-radius: 12px;
         overflow: hidden;
-        transition: transform 0.2s, box-shadow 0.2s; /* For smooth hover effect */
+        transition: transform 0.2s, box-shadow 0.2s;
         cursor: pointer;
         position: relative;
-        box-shadow: 2px 2px 10px 3px rgba(121, 121, 121, 0.906);
+        box-shadow: 10px 10px 10px -1px rgba(12, 12, 12, 0.751),
+            -10px -10px 10px -1px rgba(0, 0, 0, 0.744);
     }
 
     .ani_btn:hover {
-        transform: translateY(-5px); /* Move the button up */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .ani_btn p {
@@ -178,7 +179,7 @@
         top: 0;
         left: 0;
         transform: scale(0);
-        transition: transform 0.2s; 
+        transition: transform 0.2s;
     }
 
     .ani_btn::after {
@@ -339,7 +340,39 @@
     }
 
 
+    .bg {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .bg::before{
+        content: '';
+        position: absolute;
+        height: 330px;
+        width: 330px;
+        border-radius: 50%;
+        background: linear-gradient(rgba(116, 2, 116, 0.806), rgb(1, 1, 1));
+        transform: translate(-200px, -150px);
+    }
+    .bg::before{
+        content: '';
+        position: absolute;
+        height: 330px;
+        width: 330px;
+        border-radius: 50%;
+        background: linear-gradient(rgba(254, 139, 254, 0.806), rgb(110, 2, 120));
+        transform: translate(-400px, -150px);
+    }
+    .bg .ball_1 {
+        height: 330px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ff33cf;
+        transform: translate(-200px, 200px);
+        position: absolute;
+    }
     .section_3,
     .section_4 {
         display: grid;
@@ -352,6 +385,8 @@
         margin: 4%;
         padding: 4%;
         border-radius: 2vw;
+        z-index: 4;
+        backdrop-filter: blur(10px);
     }
 
     .section_3_items img {
@@ -467,85 +502,96 @@
         </li>
     </ul>
 </div>
+<div class="bg">
+    <div class="ball_1"></div>
+    <div class="section_3" id="section_3">
+        <div class="section_3_items">
+            <div class="ball_1"></div>
+            <h1>GROW YOUR REVENUE & ROI!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
+                multiple challenges while operating a business or a channel with the help of digital sources. We have to
+                take care of initial matters that you have to take care of.
 
-<div class="section_3" id="section_3">
-    <div class="section_3_items">
-        <h1>GROW YOUR REVENUE & ROI!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
-            multiple challenges while operating a business or a channel with the help of digital sources. We have to
-            take care of initial matters that you have to take care of.
+                First, clarify your goal outline. I always take care of goals on a serious note. Without destination
+                identification, we may not make a suitable path, or we fail to analyze our process!
 
-            First, clarify your goal outline. I always take care of goals on a serious note. Without destination
-            identification, we may not make a suitable path, or we fail to analyze our process!
+                When it comes to strategy, by driving it properly, businesses handle the point of success. I take an
+                additional period to make the proper strategy for our path & after getting effects, I follow the best
+                thing
+                for a business to drive more sales or growth.
 
-            When it comes to strategy, by driving it properly, businesses handle the point of success. I take an
-            additional period to make the proper strategy for our path & after getting effects, I follow the best thing
-            for a business to drive more sales or growth.
-
-            After the goal & making strategy, the analysis & the action to it are more than essential. The proper
-            analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What & why"
-            then it will be easy to read a business analysis.
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+                After the goal & making strategy, the analysis & the action to it are more than essential. The proper
+                analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What &
+                why"
+                then it will be easy to read a business analysis.
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="section_3_items">
-        <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a new
-            reach. For each & every idea, need some specific actions.
+        <div class="section_3_items">
+            <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a
+                new
+                reach. For each & every idea, need some specific actions.
 
-            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I accept.
-            While creating a procedure program, I always keep in mind what is doable or not.
+                When I make a strategy for a business, the movement part is one of the vital parts of that plan, I
+                accept.
+                While creating a procedure program, I always keep in mind what is doable or not.
 
-            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines
-            their ability to complete a task. We have to share tasks as per ability, not as quantity.
+                Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines
+                their ability to complete a task. We have to share tasks as per ability, not as quantity.
 
-            I have worked with multiple teams & members. I always know what they can put into our vision.
+                I have worked with multiple teams & members. I always know what they can put into our vision.
 
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="section_3_items">
-        <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of firms,
-            businesses or profiles can grow. In that case, you need some consultation to understand digital resources.
+        <div class="section_3_items">
+            <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of
+                firms,
+                businesses or profiles can grow. In that case, you need some consultation to understand digital
+                resources.
 
-            Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing through
-            online platforms is a new thing to many businessmen. But my consultation will help to grow the business
-            without second thoughts or misuse of their hard money.
+                Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing
+                through
+                online platforms is a new thing to many businessmen. But my consultation will help to grow the business
+                without second thoughts or misuse of their hard money.
 
-            Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are investing
-            the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel "Satisfied."
+                Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are
+                investing
+                the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel
+                "Satisfied."
 
-            Just book a free consultation with me & understand how things are working nowadays. These 15 minutes give
-            you an idea about "How to deal with Digital marketing approach."
+                Just book a free consultation with me & understand how things are working nowadays. These 15 minutes
+                give
+                you an idea about "How to deal with Digital marketing approach."
 
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-
-
 <h1 style="text-align: center;">SERVICES I OFFER</h1>
 <div class="section_4">
     <div class="section_4_child">
@@ -563,7 +609,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/a78de5f9-47ad-4a1d-a06b-af6e89d437b3/vzQq2dE5K6.json"
-                background="transparent" speed="1" style="width: 30vw; padding: 4%; "direction="1" mode="normal" loop
+                background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal" loop
                 autoplay></lottie-player>
             <h2>Digital Marketing</h2>
             <p>
