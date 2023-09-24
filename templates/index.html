@@ -213,6 +213,47 @@
     @import url(http://fonts.googleapis.com/css?family=Open+Sans);
     @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 
+    .video {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 7;
+    }
+
+    .video-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+    }
+
+    .video_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .video_img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .video_img button {
+        border: none;
+        cursor: pointer;
+        background-color: #160017;
+    }
+    .video_img img {
+        width: 65vw;
+    }
+
     .accordion {
         width: 100%;
         max-width: 90vw;
@@ -348,7 +389,8 @@
         width: 100%;
         overflow-x: hidden;
     }
-    .bg::before{
+
+    .bg::before {
         content: '';
         position: absolute;
         height: 330px;
@@ -359,7 +401,7 @@
         opacity: 0.6;
     }
 
-    .bg::after{
+    .bg::after {
         content: '';
         position: absolute;
         height: 330px;
@@ -369,6 +411,7 @@
         transform: translate(200px, 400px);
         opacity: 0.4;
     }
+
     .bg .ball_1 {
         height: 30px;
         width: 30px;
@@ -378,6 +421,7 @@
         position: absolute;
         opacity: 0.6;
     }
+
     .bg .ball_2 {
         height: 100px;
         width: 100px;
@@ -386,6 +430,7 @@
         position: absolute;
         opacity: 0.6;
     }
+
     .section_3,
     .section_4 {
         display: grid;
@@ -479,7 +524,34 @@
         observer.observe(section1Items);
     });
 </script>
-
+<div class="video_img"><button id="openVideo"><img src="/static/video.webp" alt=""></button></div>
+<div class="video" id="videoModal">
+    <div class="video-content">
+        <span class="video_close" id="closeVideoModal">&times;</span>
+        <iframe title="vimeo-player" src="" width="100%" height="100%" frameborder="0" allowfullscreen
+            id="videoFrame"></iframe>
+    </div>
+</div>
+<script>
+    var modal = document.getElementById("videoModal");
+    var closeBtn = document.getElementById("closeVideoModal");
+    var videoFrame = document.getElementById("videoFrame");
+    function openVideoPopup() {
+        modal.style.display = "block";
+        videoFrame.src = "https://player.vimeo.com/video/838252412?h=b7c3fd9e82";
+    }
+    function closeVideoPopup() {
+        modal.style.display = "none";
+        videoFrame.src = "";
+    }
+    document.getElementById("openVideo").addEventListener("click", openVideoPopup);
+    closeBtn.addEventListener("click", closeVideoPopup);
+    window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+            closeVideoPopup();
+        }
+    });
+</script>
 
 <div class="accordion">
     <ul>
@@ -522,7 +594,7 @@
     <div class="ball_2"></div>
     <div class="section_3" id="section_3">
         <div class="section_3_items">
-            
+
             <h1>GROW YOUR REVENUE & ROI!</h1>
             <img src="/static/section_3.webp" alt="">
             <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
@@ -548,7 +620,7 @@
                         <p>CALL ME NOW</p>
                     </div>
                 </a>
-               
+
             </div>
         </div>
         <div class="ball_2"></div>
@@ -612,46 +684,48 @@
 </div>
 <h1 style="text-align: center;">SERVICES I OFFER</h1>
 <div class="bg">
-<div class="section_4">
-    <div class="section_4_child">
-        <div class="card">
-            <lottie-player src="https://lottie.host/de01d656-99b1-4d3c-a8ff-1933aa7faf41/6aQtTYpzOS.json"
-                background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal" loop
-                autoplay></lottie-player>
-            <h2>Social Media Marketing</h2>
-            <p>
-                Maximize your online presence. My social media marketing strategies will help you stand out and drive
-                business growth smartly.
-            </p>
+    <div class="section_4">
+        <div class="section_4_child">
+            <div class="card">
+                <lottie-player src="https://lottie.host/de01d656-99b1-4d3c-a8ff-1933aa7faf41/6aQtTYpzOS.json"
+                    background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal"
+                    loop autoplay></lottie-player>
+                <h2>Social Media Marketing</h2>
+                <p>
+                    Maximize your online presence. My social media marketing strategies will help you stand out and
+                    drive
+                    business growth smartly.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="section_4_child">
-        <div class="card">
-            <lottie-player src="https://lottie.host/a78de5f9-47ad-4a1d-a06b-af6e89d437b3/vzQq2dE5K6.json"
-                background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal" loop
-                autoplay></lottie-player>
-            <h2>Digital Marketing</h2>
-            <p>
-                I am here to upgrade the online performances with data-driven strategies. Let's enhance your brand and
-                drive success.
-            </p>
+        <div class="section_4_child">
+            <div class="card">
+                <lottie-player src="https://lottie.host/a78de5f9-47ad-4a1d-a06b-af6e89d437b3/vzQq2dE5K6.json"
+                    background="transparent" speed="1" style="width: 30vw; padding: 4%; " direction="1" mode="normal"
+                    loop autoplay></lottie-player>
+                <h2>Digital Marketing</h2>
+                <p>
+                    I am here to upgrade the online performances with data-driven strategies. Let's enhance your brand
+                    and
+                    drive success.
+                </p>
+            </div>
         </div>
-    </div>
-    
-    <div class="section_4_child">
-        <div class="card">
-            <lottie-player src="https://lottie.host/5eca545b-2cf1-44ea-8a4e-a43beaa97c64/OO9nun21cK.json"
-                background="transparent" speed="1" style="width: 30vw; padding: 4%;" direction="1" mode="normal" loop
-                autoplay></lottie-player>
-            <h2>Canva Design</h2>
-            <p>
-                I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
-                designs.
-            </p>
+
+        <div class="section_4_child">
+            <div class="card">
+                <lottie-player src="https://lottie.host/5eca545b-2cf1-44ea-8a4e-a43beaa97c64/OO9nun21cK.json"
+                    background="transparent" speed="1" style="width: 30vw; padding: 4%;" direction="1" mode="normal"
+                    loop autoplay></lottie-player>
+                <h2>Canva Design</h2>
+                <p>
+                    I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
+                    designs.
+                </p>
+            </div>
         </div>
+        <div class="ball_1"></div>
     </div>
-    <div class="ball_1"></div>
-</div>
 </div>
 <div class="design">
     <h1>My Canva Design Sample</h1>
