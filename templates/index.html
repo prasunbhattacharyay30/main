@@ -119,21 +119,28 @@
         -ms-align-items: left;
         align-items: left;
         margin-left: 8%;
-
+        margin-top: 6%;
     }
 
     .ani_btn {
         position: relative;
-        width: 20vw;
+        width: 24vw;
         display: flex;
         justify-content: center;
         -ms-align-items: center;
         align-items: center;
         background-color: #b300b3;
-        border-radius: 6px;
+        border-radius: 12px;
         overflow: hidden;
-        box-shadow: 3px 3px 20px rgba(54, 54, 54, 0.904), 0px 8px 16px rgba(48, 48, 48, 0.6);
-        backdrop-filter: blur(5px);
+        transition: transform 0.2s, box-shadow 0.2s; /* For smooth hover effect */
+        cursor: pointer;
+        position: relative;
+        box-shadow: 2px 2px 10px 3px rgba(121, 121, 121, 0.906);
+    }
+
+    .ani_btn:hover {
+        transform: translateY(-5px); /* Move the button up */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .ani_btn p {
@@ -148,7 +155,7 @@
     @media (max-width:500px) {
 
         .ani_btn {
-            width: 20vw;
+            width: 30vw;
         }
 
         .ani_btn p {
@@ -168,18 +175,23 @@
         margin-bottom: -80%;
         background: linear-gradient(#b300b357, #b300b349, #b300b356, #b300b37b, #ff33cf32, #ff5733, #ff33cf);
         animation: rotate 2s linear infinite;
-
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transition: transform 0.2s; 
     }
 
     .ani_btn::after {
         content: '';
         position: absolute;
         background-color: #080808;
+        margin-right: 1px;
+        margin-top: 1px;
         inset: 2px;
         border-width: 1px;
         border-style: dotted solid;
-        border-color: white;
-        border-radius: 8px;
+        border-color: 1px dotted #7d2ae8;
+        border-radius: 12px;
     }
 
     @keyframes rotate {
