@@ -370,7 +370,7 @@
         width: 30px;
         border-radius: 50%;
         background-color: #ff33cf;
-        transform: translate(-200px, 200px);
+        transform: translate(-200px, 50px);
         position: absolute;
     }
     .bg .ball_2 {
@@ -420,6 +420,8 @@
         background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
         backdrop-filter: blur(1px);
+        z-index: 4;
+        backdrop-filter: blur(5px);
     }
 </style>
 {% endblock %}
@@ -603,6 +605,7 @@
     </div>
 </div>
 <h1 style="text-align: center;">SERVICES I OFFER</h1>
+<div class="bg">
 <div class="section_4">
     <div class="section_4_child">
         <div class="card">
@@ -628,6 +631,7 @@
             </p>
         </div>
     </div>
+    
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/5eca545b-2cf1-44ea-8a4e-a43beaa97c64/OO9nun21cK.json"
@@ -640,8 +644,9 @@
             </p>
         </div>
     </div>
+    <div class="ball_1"></div>
 </div>
-
+</div>
 <div class="design">
     <h1>My Canva Design Sample</h1>
     <div class="design_child">
