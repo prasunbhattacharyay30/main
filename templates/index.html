@@ -346,16 +346,6 @@
         justify-content: center;
         align-items: center;
     }
-
-    .bg::before{
-        content: '';
-        position: absolute;
-        height: 330px;
-        width: 330px;
-        border-radius: 50%;
-        background: linear-gradient(rgba(116, 2, 116, 0.806), rgb(1, 1, 1));
-        transform: translate(-200px, -150px);
-    }
     .bg::before{
         content: '';
         position: absolute;
@@ -363,14 +353,21 @@
         width: 330px;
         border-radius: 50%;
         background: linear-gradient(rgba(254, 139, 254, 0.806), rgb(110, 2, 120));
-        transform: translate(-400px, -150px);
+        transform: translate(-100px, -150px);
     }
     .bg .ball_1 {
-        height: 330px;
-        width: 10px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
         background-color: #ff33cf;
         transform: translate(-200px, 200px);
+        position: absolute;
+    }
+    .bg .ball_2 {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: #fd0dc5a0;
         position: absolute;
     }
     .section_3,
@@ -504,9 +501,10 @@
 </div>
 <div class="bg">
     <div class="ball_1"></div>
+    <div class="ball_2"></div>
     <div class="section_3" id="section_3">
         <div class="section_3_items">
-            <div class="ball_1"></div>
+            
             <h1>GROW YOUR REVENUE & ROI!</h1>
             <img src="/static/section_3.webp" alt="">
             <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
@@ -532,8 +530,10 @@
                         <p>CALL ME NOW</p>
                     </div>
                 </a>
+               
             </div>
         </div>
+        <div class="ball_2"></div>
         <div class="section_3_items">
             <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
             <img src="/static/section_3.webp" alt="">
