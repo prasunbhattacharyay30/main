@@ -2,20 +2,11 @@
 {% block head %}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <style>
-    .section_1_items p {
-        position: relative;
-        font-size: 3vw;
-        margin-left: 2%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
+    
 
     .section_1_items.animate h1 {
         animation: h1tag 4s;
         text-align: left;
-        font-size: 4vw;
-        color: papayawhip;
-        font-weight: 400;
     }
 
     @keyframes h1tag {
@@ -388,7 +379,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        overflow-x: hidden;
     }
 
     .bg::before {
@@ -450,12 +440,6 @@
 
     .section_3_items img {
         width: 30vw;
-    }
-
-    .section_3_items p,
-    .section_4_items p {
-        font-size: 3vw;
-        text-align: justify;
     }
 
     .section_3_items h1,
@@ -554,42 +538,6 @@
     });
 </script>
 
-<div class="accordion">
-    <ul>
-        <li style="border-color: rgb(219, 213, 255);">
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <p class="client">Client name goes here</p>
-            </div>
-        </li>
-        <li style="border-color: rgb(234, 255, 213);">
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-        </li>
-        <li style="border-color: rgb(255, 213, 213);">
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-        </li>
-        <li style="border-color: rgb(255, 182, 244);">
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-        </li>
-        <li>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-        </li>
-    </ul>
-</div>
 <div class="bg">
     <div class="ball_1"></div>
     <div class="ball_2"></div>
@@ -688,6 +636,10 @@
         <h2>Business Needs Proper Attention & Care!</h2>
         <p>The strategy Defines The Path, The goal Defines The Destination, and action Defines That You Are Growing!
         </p>
+        <div class="section_6">
+            <h2>I want to grow your business as I want to grow myself. I know we depend on each other. I put all my hard
+                knowledge, expertise & growth tricks to reach the top.</h2>
+        </div>
     </div>
 </div>
 <h1 style="text-align: center;">SERVICES I OFFER</h1>
@@ -736,10 +688,6 @@
     </div>
 </div>
 
-<div class="section_6">
-    <h2>I want to grow your business as I want to grow myself. I know we depend on each other. I put all my hard
-        knowledge, expertise & growth tricks to reach the top.</h2>
-</div>
 <div class="design">
     <h1>My Canva Design Sample</h1>
     <div class="design_child">
@@ -755,47 +703,67 @@
     </div>
 
 </div>
-
-
-<div class="expertis">
-    <h1>Expertis</h1>
-    <div class="expertis_child anim">
-        <div class="expertis_items">
-            <i class="fa-solid fa-chart-simple fa-beat-fade"></i>
-            <h2>Digital Marketing Strategist</h2>
+<div class="work" id="work">
+    <h1>My Work</h1>
+    <div class="work_child">
+        <div class="work_items">
+            <img src="/static/section_3.webp" alt="">
         </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-rectangle-ad fa-beat-fade"></i>
-            <h2>Meta Ads</h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-g fa-beat-fade"></i>
-            <h2>Google Ads</h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-regular fa-envelope fa-beat"></i>
-            <h2>Email Marketing</h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-user-group fa-beat-fade"></i>
-            <h2>Organic Social Media Managing</h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-icons fa-beat"></i>
-            <h2>Content Strategist</h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-people-roof fa-beat-fade"></i>
-            <h2>Marketing Team Management </h2>
-        </div>
-        <div class="expertis_items">
-            <i class="fa-solid fa-palette fa-beat-fade"></i>
-            <h2>Canva Design</h2>
+        <div class="ani_button">
+            <a href="/work">
+                <div class="ani_btn">
+                    <p>See More</p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
+<h1>What People Say About me</h1>
+<div class="accordion">
+    <ul>
+        <li style="border-color: rgb(219, 213, 255);">
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p class="client">Client name goes here</p>
+            </div>
+        </li>
+        <li style="border-color: rgb(234, 255, 213);">
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </li>
+        <li style="border-color: rgb(255, 213, 213);">
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </li>
+        <li style="border-color: rgb(255, 182, 244);">
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </li>
+    </ul>
+</div>
 
-<span class="h2r"
-    style="background-color: chartreuse; color:darkviolet; padding-left: 4px; border-radius: 30%; margin-right: 4px;">
-    &#10004 </span>
+<h1>Let's work together !</h1>
+<p>theknightmarketer@gmail.com</p>
+<div class="ani_button">
+    <a href="tel:+919563432724">
+        <div class="ani_btn">
+            <p>CALL ME NOW</p>
+        </div>
+    </a>
+</div>
+
 {% endblock %}

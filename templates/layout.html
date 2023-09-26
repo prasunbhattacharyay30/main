@@ -19,24 +19,7 @@
             background-color: black;
             background: linear-gradient(280deg, black, rgb(34, 0, 31));
             width: 100%;
-            /* animation: color 8s ease-in-out infinite; 
-            background-size: 400% 100% ; */
             overflow-x: hidden;
-        }
-
-        @keyframes color {
-
-            0% {
-                background-position: 0 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0 50%;
-            }
         }
 
         nav {
@@ -59,11 +42,29 @@
         h1,
         h2,
         h3,
-        p,
         a {
             color: #e8cfcf;
             opacity: 0.9;
             text-decoration: none;
+        }
+
+       p {
+            position: relative;
+            font-size: 3vw;
+            margin-left: 2%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            color: papayawhip;
+        }
+
+        h1, h2{
+            font-size: 3.2vw;
+            color: aliceblue;
+            margin-top: 15%;
+            font-family: Intertight Variablefont Wght, sans-serif;
+            font-weight: 400;
+            text-align: left;
+            text-transform: capitalize;
         }
 
         .title {
@@ -92,22 +93,6 @@
             }
         }
 
-        .title_items h1,
-        .title_items h2 {
-            font-size: 3.2vw;
-            color: aliceblue;
-            margin-top: 15%;
-            font-family: Intertight Variablefont Wght, sans-serif;
-            font-weight: 400;
-            text-align: left;
-            text-transform: capitalize;
-        }
-
-        .title_items h2 {
-            font-size: 4.73vw;
-            margin-top: -2%;
-        }
-
         .title_items img {
             width: 46vw;
             animation-delay: 2s;
@@ -117,72 +102,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
             margin: 8%;
-        }
-
-        .title_items_role p {
-            font-size: 1.6vw;
-            margin: 20%;
-            margin-top: -8%;
-            line-height: 1.8vw;
-        }
-
-        .title_items_quote p {
-            font-size: 1.4vw;
-            padding: 10%;
-            margin-top: -16%;
-            line-height: 2vw;
-            color: rgb(253, 253, 253);
-        }
-
-        .expertis {
-            width: 90%;
-            margin-left: 4%;
-            padding: 0 8%;
-            background-color: rgba(9, 9, 9, 0.71);
-            border: 2px solid #ffffff;
-            border-top-right-radius: 20%;
-            border-bottom-left-radius: 20%;
-        }
-
-        .expertis h1,
-        .design h1 {
-            text-align: center;
-            padding-top: 10%;
-            margin-bottom: 60px;
-            font-weight: 600;
-            position: relative;
-        }
-
-        .expertis h1::after {
-            content: '';
-            background: #ffffff;
-            width: 100px;
-            height: 5px;
-            position: absolute;
-            bottom: -7px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .expertis_child {
-            margin-top: -3%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        }
-
-        .expertis_items {
-            text-align: center;
-            padding: 20px 10px;
-            border-radius: 5px;
-            font-size: 1.2vw;
-            cursor: pointer;
-            background: transparent;
-        }
-
-        .expertis_items i {
-            font-size: 5vw;
-            margin-bottom: 10px;
-            color: rgb(255, 97, 255);
         }
 
         .design {
@@ -202,7 +121,7 @@
             font-size: 2vw;
         }
 
-        .design_items img {
+        .design_items img, img {
             width: 42.5vw;
         }
 
@@ -212,13 +131,6 @@
             padding: 2%;
             color: aquamarine;
         }
-
-        @media (max-width:500px) {
-            .expertis_child {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
-        }
-
         @media (max-width:500px) {
             .design_child {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -240,10 +152,9 @@
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href="#">Work</a>
+        <a href="#work">Work</a>
         <a href="/canva">Canva</a>
         <a href="/about">About Me</a>
-        <a href="/contact">Contact</a>
     </nav>
     {% block body %}
 
