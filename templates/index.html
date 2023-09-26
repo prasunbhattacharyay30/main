@@ -437,12 +437,6 @@
         width: 40vw;
     }
 
-    .section_3_items h1,
-    .section_4_child h2 {
-        font-size: 4vw;
-        font-weight: 400;
-        margin-bottom: 4%;
-    }
 
     .section_4_child {
         margin: 6%;
@@ -459,6 +453,38 @@
         margin: 2%;
         padding: 2%;
 
+    }
+
+    lottie-player {
+        width: 60vw;
+    }
+
+    @media (min-width:500px) {
+        .video_img img {
+            width: 60vw;
+        }
+
+        .section_3 {
+            grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+        }
+
+        .section_3_items img {
+            width: 20vw;
+        }
+
+        lottie-player {
+            width: 20vw;
+        }
+
+        .section_4 {
+            grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+        }
+        .section_4 h2,  .section_3 h1 {
+            font-size: 2vw;
+        }
+        .section_4 p,  .section_3 p {
+            font-size: 1.2vw;
+        }
     }
 </style>
 {% endblock %}
@@ -540,8 +566,6 @@
 </script>
 
 
-<div class="ball_1"></div>
-<div class="ball_2"></div>
 <div class="section_3" id="section_3">
     <div class="section_3_items">
 
@@ -570,10 +594,8 @@
                     <p>CALL ME NOW</p>
                 </div>
             </a>
-
         </div>
     </div>
-    <div class="ball_2"></div>
     <div class="section_3_items">
         <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
         <img src="/static/section_3.webp" alt="">
@@ -647,8 +669,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/496a9cee-b166-4110-a9d8-7c5cfb3610f9/qBcyHT2hYT.json"
-                background="transparent" speed="1" style="width: 60vw; padding: 4%;" direction="1" mode="normal" loop
-                autoplay></lottie-player>
+                background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
             <h2>Performance Marketing</h2>
             <p>
                 Your brand deserves a legendary sales history. Experience the impact of performance marketing. It's time
@@ -659,8 +680,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/de01d656-99b1-4d3c-a8ff-1933aa7faf41/6aQtTYpzOS.json"
-                background="transparent" speed="1" style="width: 60vw; padding: 4%; " direction="1" mode="normal" loop
-                autoplay></lottie-player>
+                background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
             <h2>Social Media Marketing</h2>
             <p>
                 Maximize your online presence. My social media marketing strategies will help you stand out and
@@ -672,8 +692,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/a78de5f9-47ad-4a1d-a06b-af6e89d437b3/vzQq2dE5K6.json"
-                background="transparent" speed="1" style="width: 60vw; padding: 4%; " direction="1" mode="normal" loop
-                autoplay></lottie-player>
+                background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
             <h2>Digital Marketing</h2>
             <p>
                 I am here to upgrade the online performances with data-driven strategies. Let's enhance your brand
@@ -685,8 +704,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/5eca545b-2cf1-44ea-8a4e-a43beaa97c64/OO9nun21cK.json"
-                background="transparent" speed="1" style="width: 60vw; padding: 4%;" direction="1" mode="normal" loop
-                autoplay></lottie-player>
+                background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
             <h2>Canva Design</h2>
             <p>
                 I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
@@ -694,11 +712,11 @@
             </p>
         </div>
     </div>
-    <div class="ball_1"></div>
 </div>
 
 <div class="section_6">
-    <p style="margin: 8%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know we depend on each other. I put all my hard
+    <p style="margin: 8%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
+        we depend on each other. I put all my hard
         knowledge, expertise & growth tricks to reach the top.</p>
 </div>
 
