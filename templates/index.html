@@ -106,7 +106,7 @@
         justify-content: left;
         -ms-align-items: left;
         align-items: left;
-        margin-left: 8%;
+        margin-left: 4%;
         margin-top: 6%;
     }
 
@@ -417,6 +417,9 @@
         opacity: 0.6;
     }
 
+    .right-content img {
+        display: none;
+    }
     .section_3,
     .section_4 {
         display: grid;
@@ -434,7 +437,7 @@
     }
 
     .section_3_items img {
-        width: 40vw;
+        width: 60vw;
     }
 
 
@@ -465,11 +468,11 @@
         }
 
         .section_3 {
-            grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
         }
 
         .section_3_items img {
-            width: 20vw;
+            width: 30vw;
         }
 
         lottie-player {
@@ -479,11 +482,38 @@
         .section_4 {
             grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         }
-        .section_4 h2,  .section_3 h1 {
+
+        .section_4 h2,
+        .section_3 h1 {
             font-size: 2vw;
+            margin-bottom: 2%;
         }
-        .section_4 p,  .section_3 p {
+
+        .section_4 p,
+        .section_3 p {
             font-size: 1.2vw;
+        }
+
+        .section_3_items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            margin: 2%;
+            padding: 1%;
+        }
+
+        .left-content {
+            flex: 1;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .left-content img {
+            display: none;
+        }
+        .right-content img {
+            display: block;
         }
     }
 </style>
@@ -496,7 +526,7 @@
                 <h1>I will put in the efforts to implement online reputations & best sales figures of your brand!
                     Communication erases the confusions.</h1>
             </div>
-            <div class="ani_button">
+            <div style="margin-left: 8%;" class="ani_button">
                 <a href="tel:+919563432724">
                     <div class="ani_btn">
                         <p>CALL ME NOW</p>
@@ -565,93 +595,107 @@
     });
 </script>
 
-
-<div class="section_3" id="section_3">
+<div class="section_3">
     <div class="section_3_items">
-
-        <h1>GROW YOUR REVENUE & ROI!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
-            multiple challenges while operating a business or a channel with the help of digital sources. We have to
-            take care of initial matters that you have to take care of.
-            <br><br>
-            First, clarify your goal outline. I always take care of goals on a serious note. Without destination
-            identification, we may not make a suitable path, or we fail to analyze our process!
-            <br><br>
-            When it comes to strategy, by driving it properly, businesses handle the point of success. I take an
-            additional period to make the proper strategy for our path & after getting effects, I follow the best
-            thing
-            for a business to drive more sales or growth.
-            <br><br>
-            After the goal & making strategy, the analysis & the action to it are more than essential. The proper
-            analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What &
-            why"
-            then it will be easy to read a business analysis.
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+        <div class="left-content">
+            <h1>GROW YOUR REVENUE & ROI!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
+                multiple challenges while operating a business or a channel with the help of digital sources. We have to
+                take care of initial matters that you have to take care of.
+                <br><br>
+                First, clarify your goal outline. I always take care of goals on a serious note. Without destination
+                identification, we may not make a suitable path, or we fail to analyze our process!
+                <br><br>
+                When it comes to strategy, by driving it properly, businesses handle the point of success. I take an
+                additional period to make the proper strategy for our path & after getting effects, I follow the best
+                thing
+                for a business to drive more sales or growth.
+                <br><br>
+                After the goal & making strategy, the analysis & the action to it are more than essential. The proper
+                analysis can make you grow as soon as possible. I always trust that, if we have an idea about "What &
+                why"
+                then it will be easy to read a business analysis.
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="right-content">
+            <img src="/static/section_3.webp" alt="">
         </div>
     </div>
     <div class="section_3_items">
-        <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a
-            new
-            reach. For each & every idea, need some specific actions.
-            <br><br>
-            When I make a strategy for a business, the movement part is one of the vital parts of that plan, I
-            accept.
-            While creating a procedure program, I always keep in mind what is doable or not.
-            <br><br>
-            Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines
-            their ability to complete a task. We have to share tasks as per ability, not as quantity.
-            <br><br>
-            I have worked with multiple teams & members. I always know what they can put into our vision.
+        <div class="left-content">
+            <h1>SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a
+                new
+                reach. For each & every idea, need some specific actions.
+                <br><br>
+                When I make a strategy for a business, the movement part is one of the vital parts of that plan, I
+                accept.
+                While creating a procedure program, I always keep in mind what is doable or not.
+                <br><br>
+                Understanding the team is the crucial thing. That makes a difference. The skill set of a member defines
+                their ability to complete a task. We have to share tasks as per ability, not as quantity.
+                <br><br>
+                I have worked with multiple teams & members. I always know what they can put into our vision.
 
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="right-content">
+            <img src="/static/section_3.webp" alt="">
         </div>
     </div>
     <div class="section_3_items">
-        <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
-        <img src="/static/section_3.webp" alt="">
-        <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of
-            firms,
-            businesses or profiles can grow. In that case, you need some consultation to understand digital
-            resources.
-            <br><br>
-            Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing
-            through
-            online platforms is a new thing to many businessmen. But my consultation will help to grow the business
-            without second thoughts or misuse of their hard money.
-            <br><br>
-            Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are
-            investing
-            the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel
-            "Satisfied."
-            <br><br>
-            Just book a free consultation with me & understand how things are working nowadays. These 15 minutes
-            give
-            you an idea about "How to deal with Digital marketing approach."
+        <div class="left-content">
+            <h1>GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
+            <img src="/static/section_3.webp" alt="">
+            <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of
+                firms,
+                businesses or profiles can grow. In that case, you need some consultation to understand digital
+                resources.
+                <br><br>
+                Why it's important? People are spending money without ROI & outcome knowledge. As I know, marketing
+                through
+                online platforms is a new thing to many businessmen. But my consultation will help to grow the business
+                without second thoughts or misuse of their hard money.
+                <br><br>
+                Like, I saw a few dissimilar Facebook ads floating on my feed without proper guidance. They are
+                investing
+                the money in non-target audiences. I want to stop this kind of approach. Do what makes you feel
+                "Satisfied."
+                <br><br>
+                Just book a free consultation with me & understand how things are working nowadays. These 15 minutes
+                give
+                you an idea about "How to deal with Digital marketing approach."
 
-        </p>
-        <div class="ani_button">
-            <a href="tel:+919563432724">
-                <div class="ani_btn">
-                    <p>CALL ME NOW</p>
-                </div>
-            </a>
+            </p>
+            <div class="ani_button">
+                <a href="tel:+919563432724">
+                    <div class="ani_btn">
+                        <p>CALL ME NOW</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="right-content">
+            <img src="/static/section_3.webp" alt="">
         </div>
     </div>
+</div>
 </div>
 
 <div class="section_5">
