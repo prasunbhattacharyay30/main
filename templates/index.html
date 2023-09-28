@@ -507,11 +507,27 @@
         .left-content img {
             display: none;
         }
-      
-   
+
+
+        @keyframes slideFromRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideToRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
         
         .section_3_items {
-            transition: transform 0.5s ease-in-out;
             display: none;
         }
         
@@ -524,9 +540,18 @@
             padding: 1%;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* Align content at the top */
-            transform: translateX(0);
+            align-items: flex-start;
+            animation: slideFromRight 0.5s ease-in-out forwards;
         }
+        
+        .section_3_items.active.prev {
+            animation: slideToRight 0.5s ease-in-out forwards;
+        }
+        
+        .right-content img {
+            animation: slideFromRight 0.5s ease-in-out forwards;
+        }
+        
         
         .left-content {
             flex: 1;
@@ -535,9 +560,9 @@
         }
         
         .right-content {
-            display: flex; /* Add this to create a flex container for the image */
-            flex-direction: column; /* Stack content vertically */
-            align-items: flex-end; /* Align content in the right column to the right */
+            display: flex; 
+            flex-direction: column;
+            align-items: flex-end; 
         }
         
         .right-content img {
@@ -764,45 +789,46 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function() {
-    const slides = $(".section_3_items");
-    let currentSlide = 0;
-    
-    // Function to show the next slide
-    function showSlide(index) {
-        slides.removeClass("active");
-        slides.eq(index).addClass("active");
-    }
-    
-    // Function to show the previous slide
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    $(document).ready(function() {
+        const slides = $(".section_3_items");
+        let currentSlide = 0;
+        
+        // Function to show the next slide
+        function showSlide(index) {
+            slides.removeClass("active prev");
+            slides.eq(index).addClass("active");
+            slides.eq(currentSlide).addClass("prev");
+        }
+        
+        // Function to show the previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+            clearInterval(autoAdvanceInterval); // Stop auto-advance
+        }
+        
+        // Function to show the next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+            clearInterval(autoAdvanceInterval); // Stop auto-advance
+        }
+        
+        // Handle button clicks
+        $("#prevButton").click(function() {
+            prevSlide();
+        });
+        
+        $("#nextButton").click(function() {
+            nextSlide();
+        });
+        
+        // Auto-advance the slides every few seconds
+        const autoAdvanceInterval = setInterval(nextSlide, 3000); // Adjust the time interval (in milliseconds) as needed
+        
+        // Initial setup
         showSlide(currentSlide);
-    }
-    
-    // Function to show the next slide
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-    
-    // Handle button clicks
-    $("#prevButton").click(function() {
-        prevSlide();
-        clearInterval(autoAdvanceInterval); // Stop auto-advance
     });
-    
-    $("#nextButton").click(function() {
-        nextSlide();
-        clearInterval(autoAdvanceInterval); // Stop auto-advance
-    });
-    
-    // Auto-advance the slides every few seconds
-    const autoAdvanceInterval = setInterval(nextSlide, 2000); // Adjust the time interval (in milliseconds) as needed
-    
-    // Initial setup
-    showSlide(currentSlide);
-});
 </script>
 
 
