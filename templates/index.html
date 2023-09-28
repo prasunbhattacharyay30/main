@@ -178,7 +178,6 @@
         margin-top: 1px;
         inset: 2px;
         border-width: 1px;
-
         border-radius: 12px;
     }
 
@@ -398,23 +397,28 @@
         opacity: 0.4;
     }
 
-    .bg .ball_1 {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background-color: #ff33cf;
-        transform: translate(-200px, 50px);
+    .ball_1 {
+        height: 30vw;
+        width: 60vw;
+        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32% ;
+        background-color: #5b0046;
+        transform: translate(-0px, -30vw);
         position: absolute;
-        opacity: 0.6;
+        opacity: 0.8;
+        filter: blur(6vw);
+        z-index: 0;
     }
 
-    .bg .ball_2 {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        background-color: #fd0dc5a0;
+    .ball_2 {
+        height: 180vw;
+        width: 80vw;
+        border-radius: 86% 16% 100% 0% / 54% 7% 90% 21% ;
+        background-color: #ff00c3;
+        transform: translate(-0px, 50vw);
         position: absolute;
         opacity: 0.6;
+        filter: blur(4vw);
+        z-index: 1;
     }
 
     .right-content img {
@@ -446,9 +450,10 @@
         margin: 6%;
         padding: 4%;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.105);
         box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
         backdrop-filter: blur(1px);
+        position: relative;
         z-index: 4;
         backdrop-filter: blur(5px);
     }
@@ -456,7 +461,7 @@
     .section_5_items {
         margin: 2%;
         padding: 2%;
-
+        z-index: 1;
     }
 
     lottie-player {
@@ -521,6 +526,7 @@
 </style>
 {% endblock %}
 {% block body %}
+
 <div class="title">
     <div class="title_child">
         <div class="title_items">
@@ -541,7 +547,7 @@
         </div>
     </div>
 </div>
-
+<div class="ball_1"></div>
 <section class="section_1">
     <div class="section_1_child">
         <div class="section_1_items">
@@ -701,17 +707,17 @@
 </div>
 
 <div class="section_5">
-    <div class="section_5_items">
+    <div class="section_5_items" style=" z-index: 2;">
         <h2 style="font-size: 10vw;">Business Needs</h2>
-        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%; ">Proper Attention & Care!</h2>
-        <p style="margin-top: 10%;">"The strategy Defines The Path, The goal Defines The Destination, and action Defines
+        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention & Care!</h2>
+        <p style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and action Defines
             That You Are Growing "
         </p>
     </div>
 </div>
-<h1 style="text-align: center;">SERVICES I OFFER</h1>
-
-<div class="section_4">
+<h1 style="text-align: center;  z-index: 8; ">SERVICES I OFFER</h1>
+<div class="ball_2"></div>
+<div class="section_4" style=" z-index: 4;">
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/496a9cee-b166-4110-a9d8-7c5cfb3610f9/qBcyHT2hYT.json"
@@ -759,7 +765,7 @@
         </div>
     </div>
 </div>
-
+<div class="ball_1"></div>
 <div class="section_6">
     <p style="margin: 8%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
         we depend on each other. I put all my hard
