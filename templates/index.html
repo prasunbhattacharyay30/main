@@ -216,6 +216,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: 80%;
+        z-index: 7;
     }
 
     .video_close {
@@ -229,16 +230,19 @@
     .video_img {
         display: flex;
         justify-content: center;
+        z-index: 7;
     }
 
     .video_img button {
         border: none;
         cursor: pointer;
         background-color: #160017;
+        z-index: 7;
     }
 
     .video_img img {
         width: 65vw;
+        z-index: 7;
     }
 
     .accordion {
@@ -400,19 +404,39 @@
     .ball_1 {
         height: 30vw;
         width: 60vw;
-        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32% ;
-        background-color: #5b0046;
+        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
+        background-color: #ae00ff;
         transform: translate(-0px, -30vw);
         position: absolute;
         opacity: 0.8;
         filter: blur(6vw);
         z-index: 0;
+        animation: ball 20s infinite;
     }
+
+    @keyframes ball {
+        0% {
+            transform: translate(0vw, -30vw);
+        }
+
+        20% {
+            transform: translate(50vw, -200vw);
+        }
+
+        50% {
+            transform: translate(50vw, 200vw);
+        }
+
+        100% {
+            transform: translate(0vw, -30vw);
+        }
+    }
+
 
     .ball_2 {
         height: 180vw;
         width: 80vw;
-        border-radius: 86% 16% 100% 0% / 54% 7% 90% 21% ;
+        border-radius: 86% 16% 100% 0% / 54% 7% 90% 21%;
         background-color: #ff00c3;
         transform: translate(-0px, 50vw);
         position: absolute;
@@ -421,15 +445,43 @@
         z-index: 1;
     }
 
+    .ball_3 {
+        height: 60vw;
+        width: 80vw;
+        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
+        background-color: #500654;
+        transform: translate(-0px, 10vw);
+        position: absolute;
+        opacity: 0.8;
+     
+        z-index: 0;
+        animation: ball 20s infinite;
+    }
+
+    @keyframes ball {
+        0% {
+            transform: translate(-10vw, 10vw);
+        }
+
+        50% {
+            transform: translate(-50vw, 10vw);
+        }
+
+        100% {
+            transform: translate(-10vw, 10vw);
+        }
+    }
+
     .right-content img {
         display: none;
     }
-    
+
     .section_3,
     .section_4 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+
     .section_3_items {
         border: 2px solid #4d1044d0;
         text-align: center;
@@ -437,7 +489,7 @@
         padding: 4%;
         border-radius: 2vw;
         z-index: 4;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px);
     }
 
     .section_3_items img {
@@ -467,8 +519,15 @@
     lottie-player {
         width: 60vw;
     }
+    #prevButton {
+        display: none;
+    }
 
     @media (min-width:500px) {
+        #prevButton {
+            display: block;
+        }
+    
         .video_img img {
             width: 60vw;
         }
@@ -479,7 +538,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
 
         .section_3_items img {
             width: 40vw;
@@ -511,26 +570,28 @@
 
         @keyframes slideFromRight {
             from {
-                transform: translateX(100%);
+                transform: translateX(-100%);
             }
+
             to {
                 transform: translateX(0);
             }
         }
-        
+
         @keyframes slideToRight {
             from {
                 transform: translateX(100%);
             }
+
             to {
                 transform: translateX(0);
             }
         }
-        
+
         .section_3_items {
             display: none;
         }
-        
+
         .section_3_items.active {
             display: flex;
             justify-content: space-between;
@@ -543,28 +604,28 @@
             align-items: flex-start;
             animation: slideFromRight 0.5s ease-in-out forwards;
         }
-        
+
         .section_3_items.active.prev {
             animation: slideToRight 0.5s ease-in-out forwards;
         }
-        
+
         .right-content img {
             animation: slideFromRight 0.5s ease-in-out forwards;
         }
-        
-        
+
+
         .left-content {
             flex: 1;
             padding: 0 20px;
             box-sizing: border-box;
         }
-        
+
         .right-content {
-            display: flex; 
+            display: flex;
             flex-direction: column;
-            align-items: flex-end; 
+            align-items: flex-end;
         }
-        
+
         .right-content img {
             display: block;
         }
@@ -577,28 +638,29 @@
             padding: 10%;
             border-radius: 50%;
         }
-        
+
     }
-    
+
     .slider-container {
-        width: 300px; /* Adjust the width as needed */
+        width: 300px;
+        /* Adjust the width as needed */
         overflow: hidden;
     }
-    
+
     .slider {
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
-    
+
     .slide {
-        flex: 0 0 100%; /* Each slide takes up the full width of the slider */
+        flex: 0 0 100%;
+        /* Each slide takes up the full width of the slider */
     }
-    
+
     .slide img {
         width: 100%;
         height: auto;
     }
-    
 </style>
 {% endblock %}
 {% block body %}
@@ -623,7 +685,7 @@
         </div>
     </div>
 </div>
-<div class="ball_1"></div>
+<div class="ball_3"></div>
 <section class="section_1">
     <div class="section_1_child">
         <div class="section_1_items">
@@ -658,6 +720,7 @@
             id="videoFrame"></iframe>
     </div>
 </div>
+<div class="ball_3"></div>
 <script>
     var modal = document.getElementById("videoModal");
     var closeBtn = document.getElementById("closeVideoModal");
@@ -680,11 +743,11 @@
 </script>
 
 <div class="section_3">
-    <div class="btn3">
-        <button id="prevButton"><</button>
-        <button id="nextButton">></button>
-    </div>
-    
+    <div class="ani_button" id="prevButton" style="margin-left: 2%;">
+            <div class="ani_btn" style="width:2vw;">
+                <p><</p>
+            </div>
+     </div>
     <div class="section_3_items">
         <div class="left-content">
             <h1>GROW YOUR REVENUE & ROI!</h1>
@@ -789,46 +852,58 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         const slides = $(".section_3_items");
         let currentSlide = 0;
-        
+
         // Function to show the next slide
         function showSlide(index) {
-            slides.removeClass("active prev");
+            slides.removeClass("active prev next");
             slides.eq(index).addClass("active");
             slides.eq(currentSlide).addClass("prev");
+            slides.eq((index + 1) % slides.length).addClass("next");
+
+            // Add animation classes
+            slides.eq(index).addClass("slideFromBottom");
+            slides.eq(currentSlide).addClass("slideToTop");
+
+            // Remove animation classes after animation completes
+            setTimeout(function () {
+                slides.eq(index).removeClass("slideFromBottom");
+                slides.eq(currentSlide).removeClass("slideToTop");
+            }, 500); // Adjust the time to match your animation duration
         }
-        
+
         // Function to show the previous slide
         function prevSlide() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
             clearInterval(autoAdvanceInterval); // Stop auto-advance
         }
-        
+
         // Function to show the next slide
         function nextSlide() {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
             clearInterval(autoAdvanceInterval); // Stop auto-advance
         }
-        
+
         // Handle button clicks
-        $("#prevButton").click(function() {
+        $("#prevButton").click(function () {
             prevSlide();
         });
-        
-        $("#nextButton").click(function() {
+
+        $("#nextButton").click(function () {
             nextSlide();
         });
-        
+
         // Auto-advance the slides every few seconds
         const autoAdvanceInterval = setInterval(nextSlide, 3000); // Adjust the time interval (in milliseconds) as needed
-        
+
         // Initial setup
         showSlide(currentSlide);
     });
+
 </script>
 
 
@@ -837,8 +912,10 @@
 <div class="section_5">
     <div class="section_5_items" style=" z-index: 2;">
         <h2 style="font-size: 10vw;">Business Needs</h2>
-        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention & Care!</h2>
-        <p style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and action Defines
+        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
+            & Care!</h2>
+        <p style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and
+            action Defines
             That You Are Growing "
         </p>
     </div>
@@ -922,19 +999,19 @@
 <div class="work" id="work">
     <h1>My Work</h1>
     <div class="work_child">
-       <div class="slider-container">
-    <div class="slider">
-        <div class="slide">
-            <img src="/static/CakeEmporium/img1.png" alt="">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="/static/CakeEmporium/img1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/CakeEmporium/img2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/CakeEmporium/img3.png" alt="">
+                </div>
+            </div>
         </div>
-        <div class="slide">
-            <img src="/static/CakeEmporium/img2.png" alt="">
-        </div>
-        <div class="slide">
-            <img src="/static/CakeEmporium/img3.png" alt="">
-        </div>
-    </div>
-</div>
         <div class="ani_button">
             <a href="/work">
                 <div class="ani_btn">
@@ -952,9 +1029,9 @@
 <script>
     const slider = document.querySelector(".slider");
     const slides = document.querySelectorAll(".slide");
-    
+
     let currentSlide = 0;
-    
+
     function showSlide(index) {
         if (index < 0) {
             currentSlide = slides.length - 1;
@@ -964,17 +1041,17 @@
         const translateXValue = -currentSlide * 100;
         slider.style.transform = `translateX(${translateXValue}%)`;
     }
-    
+
     function nextSlide() {
         currentSlide++;
         showSlide(currentSlide);
     }
-    
+
     // Auto-slide the images every 3 seconds
     const autoSlideInterval = setInterval(() => {
         nextSlide();
     }, 3000); // Change slide every 3 seconds (adjust as needed)
-    
+
 </script>
 <h1>What People Say About me</h1>
 <div class="accordion">
