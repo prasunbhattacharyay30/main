@@ -2,6 +2,60 @@
 {% block head %}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <style>
+    @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      
+      .logos {
+        overflow: hidden;
+        padding: 6px 0;
+        background: rgb(255, 2, 179);
+        white-space: nowrap;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 8vw;
+        height: 100%;
+        content: "";
+        z-index: 4;
+      }
+      
+      .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+      }
+      
+      .logos:hover .logos-slide {
+        animation-play-state: paused;
+      }
+      
+      .logos-slide {
+        display: inline-block;
+        animation: 35s slide infinite linear;
+      }
+      
+      .logos-slide img {
+        width: 8vw;
+        margin: 0 2vw;
+
+      }
+
+
     .section_1_items.animate h1 {
         animation: h1tag 4s;
         text-align: left;
@@ -689,7 +743,7 @@
     <div class="title_child">
         <div class="title_items">
             <div class="title_items_role">
-                <h1 style="font-weight: 600; margin-bottom: 4%; text-transform:uppercase;"> <b>I will put in the <span style="color: #7725f1;">efforts</span> <span style="">to implement online reputations</span> </b></h1>
+                <h1 style="font-weight: 600; margin-bottom: 4%; text-transform:uppercase;"> <b>I will put in the <span style="color: #f125cc;">efforts</span> <span style="">to implement online reputations</span> </b></h1>
             </div>
             <section class="section_1">
                 <div class="section_1_child">
@@ -716,14 +770,26 @@
         </div>
     </div>
 </div>
-<div class="ball_3"></div>
-<section class="section_1">
-    <div class="section_1_child">
-        <div class="section_1_items">
-            <h2 class="start" style="margin-top: 10%;"><i> 'It's time for a fresh start'</i></h2>
-        </div>
+
+<p style="z-index: 4; text-align:center; margin-top:10%; ">FEATURED IN</p>
+
+<div class="logos">
+    <div class="logos-slide">
+      <img src="./static/logos/3m.svg" />
+      <img src="./static/logos/barstool-store.svg" />
+      <img src="./static/logos/budweiser.svg" />
+      <img src="./static/logos/buzzfeed.svg" />
+      <img src="./static/logos/forbes.svg" />
+      <img src="./static/logos/macys.svg" />
+      <img src="./static/logos/menshealth.svg" />
+      <img src="./static/logos/mrbeast.svg" />
     </div>
-</section>
+  </div>
+  <script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+  </script>
+<div class="ball_3"></div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const section1Items = document.querySelector('.section_1_items');
@@ -738,8 +804,6 @@
         observer.observe(section1Items);
     });
 </script>
-& best sales figures of your brand!
-Communication erases the confusions.
 <div class="video_img"><button id="openVideo"><img src="/static/video.webp" alt=""></button></div>
 <div class="video" id="videoModal">
     <div class="video-content">
