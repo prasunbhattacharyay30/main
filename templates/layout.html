@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>
         RealOne
     </title>
@@ -38,12 +40,13 @@
             text-align: center;
             opacity: 0.6;
         }
+
         a:hover {
             color: rgb(255, 128, 242);
-           opacity: 1;
-           text-decoration: underline;
-           font-size: medium;
-          
+            opacity: 1;
+            text-decoration: underline;
+            font-size: medium;
+
         }
 
         h1,
@@ -120,11 +123,13 @@
             margin-left: 6%;
             font-size: 55vw;
         }
+
         .multi {
-            background-image: linear-gradient(43deg, #d0a541 0%, #C850C0 46%, #FFCC70 100% );
+            background-image: linear-gradient(43deg, #d0a541 0%, #C850C0 46%, #FFCC70 100%);
             -webkit-background-clip: text;
             color: transparent;
         }
+
         .design {
             width: 92%;
             margin-left: 3.6%;
@@ -157,7 +162,7 @@
 
         @media (max-width:500px) {
 
-            
+
             .design_child {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
@@ -177,20 +182,19 @@
 
         @media (min-width:600px) {
             body {
-             width: 100%;
-             }
+                width: 100%;
+            }
         }
-
     </style>
     {% block head %}{% endblock %}
 </head>
 
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="#work">Work</a>
-        <a href="/canva">Canva</a>
-        <a href="/about">About Me</a>
+        <a href="/"><i class="material-icons">home</i></a>
+        <a href="#work"><i class="material-icons">work</i></a>
+        <a href="/canva"><i class="material-icons">color_lens</i></a>
+        <a class="multi" href="/about">About Me</a>
     </nav>
     {% block body %}
 
