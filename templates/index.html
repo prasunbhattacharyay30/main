@@ -14,11 +14,11 @@
       .logos {
         overflow: hidden;
         padding: 6px 0;
-        background: rgb(255, 2, 179);
+        background: rgb(0, 0, 0);
         white-space: nowrap;
         position: relative;
         margin-bottom: 10%;
-        z-index: 2;
+        z-index: 0;
       }
       
       .logos:before,
@@ -481,7 +481,7 @@
         width: 80vw;
         border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
         background-color: #3f0255;
-        transform: translate(-20vw, 0vw);
+        transform: translate(-20vw, -20vw);
         position: absolute;
         opacity: 0.8;
         filter: blur(6vw);
@@ -735,6 +735,10 @@
                 width: 65vw;
                 margin-top: 10%;
             }
+            .ball_2 {
+                height: 100vw;
+                width: 120vw;
+                transform: translate(-20vw, -20vw); }
      }
 </style>
 {% endblock %}
@@ -777,21 +781,23 @@
 
 <div class="logos">
     <div class="logos-slide">
-      <img src="./static/logos/3m.svg" />
-      <img src="./static/logos/barstool-store.svg" />
-      <img src="./static/logos/budweiser.svg" />
-      <img src="./static/logos/buzzfeed.svg" />
-      <img src="./static/logos/forbes.svg" />
-      <img src="./static/logos/macys.svg" />
-      <img src="./static/logos/menshealth.svg" />
-      <img src="./static/logos/mrbeast.svg" />
+      <img src="./static/logos/1.png" />
+      <img src="./static/logos/2.png" />
+      <img src="./static/logos/3.png" />
+      <img src="./static/logos/4.png" />
+      <img src="./static/logos/5.png" />
+      <img src="./static/logos/6.png" />
+      <img src="./static/logos/7.png" />
+      <img src="./static/logos/8.png" />
+      <img src="./static/logos/9.png" />
+      <img src="./static/logos/10.png" />
     </div>
   </div>
   <script>
     var copy = document.querySelector(".logos-slide").cloneNode(true);
     document.querySelector(".logos").appendChild(copy);
   </script>
-<div class="ball_3"></div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const section1Items = document.querySelector('.section_1_items');
@@ -814,7 +820,7 @@
             id="videoFrame"></iframe>
     </div>
 </div>
-<div class="ball_3"></div>
+
 <script>
     var modal = document.getElementById("videoModal");
     var closeBtn = document.getElementById("closeVideoModal");
