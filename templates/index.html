@@ -17,6 +17,7 @@
         background: rgb(255, 2, 179);
         white-space: nowrap;
         position: relative;
+        margin-bottom: 10%;
         z-index: 2;
       }
       
@@ -476,15 +477,15 @@
     }
 
     .ball_2 {
-        height: 180vw;
+        height: 80vw;
         width: 80vw;
-        border-radius: 86% 16% 100% 0% / 54% 7% 90% 21%;
-        background-color: #ff00c3;
-        transform: translate(-0px, 50vw);
+        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
+        background-color: #3f0255;
+        transform: translate(-20vw, 0vw);
         position: absolute;
-        opacity: 0.6;
-        filter: blur(4vw);
-        z-index: 1;
+        opacity: 0.8;
+        filter: blur(6vw);
+        z-index: 0;
     }
 
     .ball_1 {
@@ -738,6 +739,7 @@
 </style>
 {% endblock %}
 {% block body %}
+<div class="ball_2"></div>
 
 <div class="title">
     <div class="title_child">
