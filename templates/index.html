@@ -5,6 +5,7 @@
     .section_1_items.animate h1 {
         animation: h1tag 4s;
         text-align: left;
+        font-size: 1.8vw;
     }
 
     @keyframes h1tag {
@@ -23,14 +24,17 @@
 
     .section_1_items.animate .p1 {
         animation: ptag 3s;
+        font-size: 1.6vw;
     }
 
     .section_1_items.animate .p2 {
         animation: ptag 4s;
+        font-size: 1.6vw;
     }
 
     .section_1_items.animate .p3 {
         animation: ptag 5s;
+        font-size: 1.6vw;
     }
 
     @keyframes ptag {
@@ -82,9 +86,10 @@
     }
 
     .section_1 {
-        max-width: 90vw;
+        max-width: 45vw;
         margin: 0 auto;
-        margin-top: 10%;
+        margin-top: 2%;
+        margin-left: 6%;
     }
 
 
@@ -645,6 +650,37 @@
         width: 100%;
         height: auto;
     }
+
+    @media (max-width:500px) {
+        .section_1_items.animate h2 {
+            text-align: left;
+            font-size: 6vw;
+        }
+        h1,
+        h2 {
+            font-size: 7.6vw;
+            color: aliceblue;
+            margin-top: 2%;
+            font-family: Intertight Variablefont Wght, sans-serif;
+            font-weight: 400;
+            text-align: left;
+            text-transform: capitalize;
+            line-height: 1.2;
+        }
+        .section_1_items.animate h1 {
+            font-size: 3.8vw;
+        }
+        .section_1_items.animate .p1, .section_1_items.animate .p2 , .section_1_items.animate .p3   {
+            animation: ptag 3s;
+            font-size: 2.6vw;
+        }
+        .section_1 {
+            max-width: 80vw; }
+            .title_items img {
+                width: 65vw;
+                margin-top: 10%;
+            }
+     }
 </style>
 {% endblock %}
 {% block body %}
@@ -653,9 +689,19 @@
     <div class="title_child">
         <div class="title_items">
             <div class="title_items_role">
-                <h1>I will put in the <span style="color: #7725f1;">efforts</span> <br> <span style="font-size: 3vw;">to implement online reputations & best sales figures of your brand!
-                    Communication erases the confusions.</span> </h1>
+                <h1>I will put in the <span style="color: #7725f1;">efforts</span> <span style="">to implement online reputations</span> </h1>
             </div>
+            <section class="section_1">
+                <div class="section_1_child">
+                    <div class="section_1_items">
+                        <h1>I will help make your brand stand out With a proven strategy, we'll boost your <span style="color: yellow;">ROI</span>, brand reach, and
+                            identity.</h1>
+                        <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Where is your business now ?</p>
+                        <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is it stagnating ? </p>
+                        <p class="p3"> <span style="color: yellow; font-size:2.2vw;">&#187;</span> Are your campaigns underperforming ?</p>
+                    </div>
+                </div>
+            </section>
             <div style="margin-left: 8%;" class="ani_button">
                 <a href="tel:+919563432724">
                     <div class="ani_btn">
@@ -673,12 +719,7 @@
 <section class="section_1">
     <div class="section_1_child">
         <div class="section_1_items">
-            <h1>I will help make your brand stand out With a proven strategy, we'll boost your <span style="color: yellow;">ROI</span>, brand reach, and
-                identity.</h1>
-            <p class="p1"> <span style="color: yellow; font-size:4.2vw;"> &#187;</span> Where is your business now ?</p>
-            <p class="p2"> <span style="color:yellow; font-size:4.2vw;"> &#187;</span> Is it stagnating ? </p>
-            <p class="p3"> <span style="color: yellow; font-size:4.2vw;">&#187;</span> Are your campaigns underperforming ?</p>
-            <h2 class="start"><i> 'It's time for a fresh start'</i></h2>
+            <h2 class="start" style="margin-top: 10%;"><i> 'It's time for a fresh start'</i></h2>
         </div>
     </div>
 </section>
@@ -696,6 +737,8 @@
         observer.observe(section1Items);
     });
 </script>
+& best sales figures of your brand!
+Communication erases the confusions.
 <div class="video_img"><button id="openVideo"><img src="/static/video.webp" alt=""></button></div>
 <div class="video" id="videoModal">
     <div class="video-content">
