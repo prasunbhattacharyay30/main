@@ -4,56 +4,57 @@
 <style>
     @keyframes slide {
         from {
-          transform: translateX(0);
+            transform: translateX(0);
         }
+
         to {
-          transform: translateX(-100%);
+            transform: translateX(-100%);
         }
-      }
-      
-      .logos {
+    }
+
+    .logos {
         overflow: hidden;
         background: rgba(0, 0, 0, 0.269);
         white-space: nowrap;
         position: relative;
         margin-bottom: 10%;
         z-index: 0;
-      }
-      
-      .logos:before,
-      .logos:after {
+    }
+
+    .logos:before,
+    .logos:after {
         position: absolute;
         top: 0;
         width: 8vw;
         height: 100%;
         content: "";
         z-index: 4;
-      }
-      
-      .logos:before {
+    }
+
+    .logos:before {
         left: 0;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
-      }
-      
-      .logos:after {
+    }
+
+    .logos:after {
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
-      }
-      
-      .logos:hover .logos-slide {
+    }
+
+    .logos:hover .logos-slide {
         animation-play-state: paused;
-      }
-      
-      .logos-slide {
+    }
+
+    .logos-slide {
         display: inline-block;
         animation: 105s slide infinite linear;
-      }
-      
-      .logos-slide img {
+    }
+
+    .logos-slide img {
         width: 18vw;
         height: 6vw;
         margin: 1vw;
-      }
+    }
 
 
     .section_1_items.animate h1 {
@@ -266,7 +267,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 7;
@@ -490,7 +491,7 @@
     .ball_1 {
         height: 40vw;
         width: 60vw;
-        border-radius: 0% 100% 100% 0% / 0% 48% 39% 0% ;
+        border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
         background-color: #4b074e;
         transform: translate(-0px, -30vw);
         position: absolute;
@@ -546,6 +547,7 @@
     lottie-player {
         width: 60vw;
     }
+
     #prevButton {
         display: none;
     }
@@ -554,7 +556,7 @@
         #prevButton {
             display: block;
         }
-    
+
         .video_img img {
             width: 60vw;
         }
@@ -694,6 +696,7 @@
             text-align: left;
             font-size: 6vw;
         }
+
         h1,
         h2 {
             font-size: 4vw;
@@ -704,34 +707,44 @@
             text-transform: capitalize;
             line-height: 1.2;
         }
+
         .section_1_items.animate h1 {
             font-size: 2.8vw;
         }
-        .section_1_items.animate .p1, .section_1_items.animate .p2 , .section_1_items.animate .p3   {
+
+        .section_1_items.animate .p1,
+        .section_1_items.animate .p2,
+        .section_1_items.animate .p3 {
             animation: ptag 3s;
             font-size: 2.2vw;
         }
+
         .section_1 {
-            max-width: 80vw; }
-            .title_items img {
-                width: 65vw;
-                margin-top: 10%;
-            }
-            .ball_2 {
-                height: 40vw;
-                width: 80vw;
-                transform: translate(-10vw, 28vw); }
-                .ball_1m {
-                    height: 40vw;
-                    width: 60vw;
-                    border-radius: 0% 100% 100% 0% / 0% 48% 39% 0% ;
-                    background-color: #4b074e;
-                    transform: translate(-0px, -233vw);
-                    position: absolute;
-                    opacity: 0.8;
-                    z-index: 0;
-                }
-     }
+            max-width: 80vw;
+        }
+
+        .title_items img {
+            width: 65vw;
+            margin-top: 10%;
+        }
+
+        .ball_2 {
+            height: 40vw;
+            width: 80vw;
+            transform: translate(-10vw, 28vw);
+        }
+
+        .ball_1m {
+            height: 40vw;
+            width: 60vw;
+            border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
+            background-color: #4b074e;
+            transform: translate(-0px, -233vw);
+            position: absolute;
+            opacity: 0.8;
+            z-index: 0;
+        }
+    }
 </style>
 {% endblock %}
 {% block body %}
@@ -741,17 +754,23 @@
     <div class="title_child">
         <div class="title_items">
             <div class="title_items_role">
-                <h1 style="font-weight: 600; margin-bottom: 4%; text-transform:uppercase;"> <b>I will put in the <span style="color: #f125cc;">efforts</span> <span style="">to implement online reputations</span> </b></h1>
+                <h1 style="font-weight: 600; margin-bottom: 4%; text-transform:uppercase;"> <b>I will put in the <span
+                            style="color: #f125cc;">efforts</span> <span style="">to implement online reputations</span>
+                    </b></h1>
             </div>
             <section class="section_1">
                 <div class="section_1_child">
                     <div class="section_1_items">
-                      
-                        <h1>I will help make your brand stand out With a proven strategy, we'll boost your <span style="color: yellow;">ROI</span>, brand reach, and
+
+                        <h1>I will help make your brand stand out With a proven strategy, we'll boost your <span
+                                style="color: yellow;">ROI</span>, brand reach, and
                             identity.</h1>
-                        <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Where is your business now ?</p>
-                        <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is it stagnating ? </p>
-                        <p class="p3"> <span style="color: yellow; font-size:2.2vw;">&#187;</span> Are your campaigns underperforming ?</p>
+                        <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Where is your
+                            business now ?</p>
+                        <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is it stagnating ?
+                        </p>
+                        <p class="p3"> <span style="color: yellow; font-size:2.2vw;">&#187;</span> Are your campaigns
+                            underperforming ?</p>
                     </div>
                 </div>
             </section>
@@ -773,39 +792,39 @@
 
 <div class="logos">
     <div class="logos-slide">
-      <img src="./static/logos/1.png" />
-      <img src="./static/logos/2.png" />
-      <img src="./static/logos/3.png" />
-      <img src="./static/logos/4.png" />
-      <img src="./static/logos/5.png" />
-      <img src="./static/logos/6.png" />
-      <img src="./static/logos/7.png" />
-      <img src="./static/logos/8.png" />
-      <img src="./static/logos/9.png" />
-      <img src="./static/logos/1.png" />
-      <img src="./static/logos/2.png" />
-      <img src="./static/logos/3.png" />
-      <img src="./static/logos/4.png" />
-      <img src="./static/logos/5.png" />
-      <img src="./static/logos/6.png" />
-      <img src="./static/logos/7.png" />
-      <img src="./static/logos/8.png" />
-      <img src="./static/logos/9.png" />
-      <img src="./static/logos/1.png" />
-      <img src="./static/logos/2.png" />
-      <img src="./static/logos/3.png" />
-      <img src="./static/logos/4.png" />
-      <img src="./static/logos/5.png" />
-      <img src="./static/logos/6.png" />
-      <img src="./static/logos/7.png" />
-      <img src="./static/logos/8.png" />
-      <img src="./static/logos/9.png" />
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
     </div>
-  </div>
-  <script>
+</div>
+<script>
     var copy = document.querySelector(".logos-slide").cloneNode(true);
     document.querySelector(".logos").appendChild(copy);
-  </script>
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -836,8 +855,11 @@
     var videoFrame = document.getElementById("videoFrame");
     function openVideoPopup() {
         modal.style.display = "block";
-        videoFrame.src = "https://player.vimeo.com/video/838252412?h=b7c3fd9e82";
+        videoFrame.style.width = "80vw";
+        videoFrame.style.height = "80vh";
+        videoFrame.src = "https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1";
     }
+
     function closeVideoPopup() {
         modal.style.display = "none";
         videoFrame.src = "";
@@ -849,14 +871,17 @@
             closeVideoPopup();
         }
     });
+
 </script>
-<div class="ball_1m" style="transform: translate(-0px, 180vw);" ></div>
-<button id="prevButton" style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b><</b></span></button>
+<div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
+<button id="prevButton"
+    style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b>
+            < </b></span></button>
 <div class="section_3">
-    
+
     <div class="section_3_items">
         <div class="left-content">
-            
+
             <h1>GROW YOUR REVENUE & ROI!</h1>
             <img src="/static/roi.png" alt="">
             <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
@@ -1010,7 +1035,7 @@
 
         // Initial setup
         showSlide(currentSlide);
-    }); 
+    });
 
 </script>
 
@@ -1079,13 +1104,13 @@
 <div class="section_6">
     <p style="margin: 8%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
         we depend on each other. I put all my hard
-        knowledge, <span class="multi" >expertise & growth tricks to reach the top.</span> </p>
+        knowledge, <span class="multi">expertise & growth tricks to reach the top.</span> </p>
 </div>
 
 <div class="section_5">
     <div class="section_5_items" style=" z-index: 2;">
         <h2 style="font-size: 6vw;">What People Say<span style="color: yellow;">About me</span> </h2>
-        
+
     </div>
 </div>
 <h1> </h1>
