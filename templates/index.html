@@ -189,7 +189,7 @@
     }
 
     .ani_btn:hover {
-        transform: translateY(-5px);
+        transform: translateY(-2px);
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     }
 
@@ -568,7 +568,7 @@
 
 
         .section_3_items img {
-            width: 40vw;
+            width: 50vw;
         }
 
         lottie-player {
@@ -851,14 +851,12 @@
     });
 </script>
 <div class="ball_1m" style="transform: translate(-0px, 180vw);" ></div>
+<button id="prevButton" style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b><</b></span></button>
 <div class="section_3">
-    <button class="ani_button" id="prevButton" style="margin-left: 2%;">
-            <div class="ani_btn" style="width:3vw;">
-                <p> < </p>
-            </div>
-        </button>
+    
     <div class="section_3_items">
         <div class="left-content">
+            
             <h1>GROW YOUR REVENUE & ROI!</h1>
             <img src="/static/roi.png" alt="">
             <p>Grow your revenue by understanding the market requirements & applications. Creators & businessmen face
@@ -887,7 +885,7 @@
             </div>
         </div>
         <div class="right-content">
-            <img src="/static/roi.png" alt="">
+            <img style="height: 40vw;" src="/static/roi.png" alt="">
         </div>
     </div>
     <div class="section_3_items">
@@ -1012,7 +1010,7 @@
 
         // Initial setup
         showSlide(currentSlide);
-    });
+    }); 
 
 </script>
 
