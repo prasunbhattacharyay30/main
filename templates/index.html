@@ -479,7 +479,7 @@
     }
 
     .ball_2 {
-        height: 140vw;
+        height: 100vw;
         width: 80vw;
         border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
         background-color: #3f0255;
@@ -758,7 +758,7 @@
         }
 
         .ball_2 {
-            height: 440vw;
+            height: 240vw;
             width: 180vw;
             transform: translate(-120vw, 28vw);
         }
@@ -773,11 +773,22 @@
             opacity: 0.8;
             z-index: 0;
         }
+        .ball_2m {
+            height: 100vw;
+            width: 60vw;
+            border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
+            background-color: #4b074e;
+            transform: translate(-0px, -233vw);
+            position: absolute;
+            opacity: 0.8;
+            z-index: 0;
+        }
     }
 </style>
 {% endblock %}
 {% block body %}
 <div class="ball_2"></div>
+<div class="ball_2" style="     transform: translate(40vw, 155vw);"></div>
 
 <div class="title">
     <div class="title_child">
@@ -916,7 +927,6 @@
         }
     });
 </script>
-
 
 <div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
 <button id="prevButton"
