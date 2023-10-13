@@ -312,7 +312,7 @@
     .accordion {
         width: 100%;
         max-width: 90vw;
-        height: 350px;
+        height: 40vw;
         overflow: hidden;
         margin: 50px auto;
     }
@@ -330,13 +330,13 @@
         vertical-align: bottom;
         position: relative;
         width: 16.666%;
-        height: 350px;
+        height: 40vw;
         background-repeat: no-repeat;
         background-position: center center;
         transition: all 500ms ease;
         border-style: solid;
         border-color: rgba(158, 255, 219, 0.705);
-        border-width: 0px 0px 0px 2px;
+        border-width: 0px 0px 0px 1px;
     }
 
     .accordion ul li div {
@@ -347,7 +347,7 @@
 
     .accordion ul li div {
         display: block;
-        height: 350px;
+        height: 40vw;
         width: 100%;
         position: relative;
         z-index: 3;
@@ -375,7 +375,7 @@
 
     .accordion ul li div a h2 {
         font-family: Montserrat, sans-serif;
-        font-size: 16px;
+        font-size: 10px;
         text-transform: uppercase;
         margin-top: 10px;
     }
@@ -508,7 +508,7 @@
     .section_4 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        margin-top: 10%;
+        margin-top: 1%;
     }
 
     .section_3_items {
@@ -551,6 +551,11 @@
 
     #prevButton {
         display: none;
+    }
+
+    .say_p {
+        font-size: 1.1vw;
+        margin: 2%;
     }
 
     @media (min-width:500px) {
@@ -1119,15 +1124,19 @@
 
     </div>
 </div>
+
+
 <h1> </h1>
 <div class="accordion">
     <ul>
-        <li style="border-color: rgb(219, 213, 255);">
+        <li style="border-color: rgb(193, 183, 252);">
             <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <p class="client">Client name goes here</p>
+                <h2 class="say_h2"> <span><img  src="/static/main.jpg" style="width: 50px; height: 50px; border-radius: 50%; margin: 2%;" alt=""></span> Shilpi Sharma</h2>
+                <p class="say_p" style="color:rgb(194, 185, 250);">About 1 year ago, our team reached out to Prasun. At that point to time we already met with few of fake Digital Marketing mangers which caused us low quality of work and huge amount of money waste. 
+                    After handover our work to Prasun, he did incredible and magical job. We got very good quality of work in very low cost. We are regularly in touch with him. He always use to guide us how we can enhance our services more and efficiently. 
+                    
+                    We are very thankful and happy to have Prasun as a part of our Makeupaura team.</p>
+                <p class="client">CEO | MakeupAura</p>
             </div>
         </li>
         <li style="border-color: rgb(234, 255, 213);">
