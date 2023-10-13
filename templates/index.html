@@ -296,18 +296,35 @@
         z-index: 7;
     }
 
-    .video_img button {
-        border: none;
-        cursor: pointer;
-        background-color: none;
-        z-index: 1;
-        
-    }
 
     .video_img img {
-        width: 50vw;
+        width: 40vw;
+        height: 22vw;
+        margin: 1vw;
         z-index: 7;
-    padding: 15%;
+  
+   
+    }
+    .section_6, .video_a {
+        border: 2px solid #4d1044d0;
+       width: 90vw;
+       margin-left: 4vw;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.105);
+        box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
+        backdrop-filter: blur(1px);
+        position: relative;
+        z-index: 4;
+        backdrop-filter: blur(5px);
+    }
+    .video_a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 45vw;
+        height: 24vw;
+        margin: 4%;
+     
     }
 
     .accordion {
@@ -479,7 +496,7 @@
     }
 
     .ball_2 {
-        height: 100vw;
+        height: 120vw;
         width: 80vw;
         border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
         background-color: #3f0255;
@@ -567,18 +584,7 @@
         font-size: 2vw;
         margin: 1%;
     }
-    .section_6 {
-        border: 2px solid #4d1044d0;
-       width: 90vw;
-       margin-left: 4vw;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.105);
-        box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
-        backdrop-filter: blur(1px);
-        position: relative;
-        z-index: 4;
-        backdrop-filter: blur(5px);
-    }
+    
    
     @media (min-width:500px) {
         #prevButton {
@@ -788,7 +794,7 @@
 {% endblock %}
 {% block body %}
 <div class="ball_2"></div>
-<div class="ball_2" style="     transform: translate(40vw, 155vw);"></div>
+
 
 <div class="title">
     <div class="title_child">
@@ -878,13 +884,20 @@
     </div>
 </div>
 
+
 <div class="video_img">
-    <a id="openVideo" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
-        <img src="/static/Anuj.gif" alt="">
-    </a>
-    <a id="openVideo_2" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
-        <img src="/static/Anjali.gif" alt="">
-    </a>
+    <div class="video_a">
+        <a  id="openVideo" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
+            <img src="/static/Anuj.gif" alt="">
+        </a>
+    </div>
+  
+    <div class="video_a">
+        <a  id="openVideo_2" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
+            <img src="/static/Anjali.gif" alt="">
+        </a>
+    </div>
+    
 </div>
 
 <div class="video" id="videoModal">
