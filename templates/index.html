@@ -299,8 +299,9 @@
     .video_img button {
         border: none;
         cursor: pointer;
-        background-color: #000000;
-        z-index: 7;
+        background-color: none;
+        z-index: 1;
+        
     }
 
     .video_img img {
@@ -478,7 +479,7 @@
     }
 
     .ball_2 {
-        height: 120vw;
+        height: 140vw;
         width: 80vw;
         border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
         background-color: #3f0255;
@@ -494,7 +495,7 @@
         width: 60vw;
         border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
         background-color: #4b074e;
-        transform: translate(-0px, -30vw);
+        transform: translate(-0px, -20vw);
         position: absolute;
         opacity: 0.8;
         z-index: 0;
@@ -763,7 +764,7 @@
         }
 
         .ball_1m {
-            height: 140vw;
+            height: 100vw;
             width: 60vw;
             border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
             background-color: #4b074e;
@@ -867,8 +868,12 @@
 </div>
 
 <div class="video_img">
-    <button id="openVideo"><img src="/static/Anuj.gif" alt=""></button>
-    <button id="openVideo_2"><img src="/static/Anjali.gif" alt=""></button>
+    <a id="openVideo" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
+        <img src="/static/Anuj.gif" alt="">
+    </a>
+    <a id="openVideo_2" href="javascript:void(0);" onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
+        <img src="/static/Anjali.gif" alt="">
+    </a>
 </div>
 
 <div class="video" id="videoModal">
