@@ -510,7 +510,11 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         margin-top: 1%;
     }
-
+    .section_4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin-top: 1%;
+    }
     .section_3_items {
         border: 2px solid #4d1044d0;
         text-align: center;
@@ -585,7 +589,7 @@
         }
 
         .section_4 {
-            grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
         }
 
         .section_4 h2,
@@ -886,71 +890,6 @@
 </script>
 
 
-<p style="z-index: 4; text-align:center; margin-top:2%; ">FEATURED IN</p>
-<div class="logos">
-    <div class="logos-slide">
-        <img src="./static/logos/1.png" />
-        <img src="./static/logos/2.png" />
-        <img src="./static/logos/3.png" />
-        <img src="./static/logos/4.png" />
-        <img src="./static/logos/5.png" />
-        <img src="./static/logos/6.png" />
-        <img src="./static/logos/7.png" />
-        <img src="./static/logos/8.png" />
-        <img src="./static/logos/9.png" />
-        <img src="./static/logos/1.png" />
-        <img src="./static/logos/2.png" />
-        <img src="./static/logos/3.png" />
-        <img src="./static/logos/4.png" />
-        <img src="./static/logos/5.png" />
-        <img src="./static/logos/6.png" />
-        <img src="./static/logos/7.png" />
-        <img src="./static/logos/8.png" />
-        <img src="./static/logos/9.png" />
-        <img src="./static/logos/1.png" />
-        <img src="./static/logos/2.png" />
-        <img src="./static/logos/3.png" />
-        <img src="./static/logos/4.png" />
-        <img src="./static/logos/5.png" />
-        <img src="./static/logos/6.png" />
-        <img src="./static/logos/7.png" />
-        <img src="./static/logos/8.png" />
-        <img src="./static/logos/9.png" />
-    </div>
-</div>
-<script>
-    var copy = document.querySelector(".logos-slide").cloneNode(true);
-    document.querySelector(".logos").appendChild(copy);
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const section1Items = document.querySelector('.section_1_items');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    section1Items.classList.add('animate');
-                    observer.unobserve(section1Items);
-                }
-            });
-        });
-        observer.observe(section1Items);
-    });
-</script>
-
-<div class="section_5">
-    <div class="section_5_items" style=" z-index: 2;">
-        <h2 style="font-size: 10vw;">Business Needs</h2>
-        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
-            & <span style="color: yellow;">Care!</span> </h2>
-        <p style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and
-            action Defines
-            That You Are Growing "
-        </p>
-    </div>
-</div>
-
-
 
 <div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
 <button id="prevButton"
@@ -1118,6 +1057,17 @@
 
 </script>
 
+<div class="section_5">
+    <div class="section_5_items" style=" z-index: 2;">
+        <h2 style="font-size: 10vw;">Business Needs</h2>
+        <h2 style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
+            & <span style="color: yellow;">Care!</span> </h2>
+        <p style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and
+            action Defines
+            That You Are Growing "
+        </p>
+    </div>
+</div>
 
 
 
@@ -1177,6 +1127,58 @@
         </li>
     </ul>
 </div>
+
+<p style="z-index: 4; text-align:center; margin-top:2%; ">FEATURED IN</p>
+<div class="logos">
+    <div class="logos-slide">
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
+        <img src="./static/logos/1.png" />
+        <img src="./static/logos/2.png" />
+        <img src="./static/logos/3.png" />
+        <img src="./static/logos/4.png" />
+        <img src="./static/logos/5.png" />
+        <img src="./static/logos/6.png" />
+        <img src="./static/logos/7.png" />
+        <img src="./static/logos/8.png" />
+        <img src="./static/logos/9.png" />
+    </div>
+</div>
+<script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const section1Items = document.querySelector('.section_1_items');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    section1Items.classList.add('animate');
+                    observer.unobserve(section1Items);
+                }
+            });
+        });
+        observer.observe(section1Items);
+    });
+</script>
 
 <h1 style="margin-left: 4%; font-size: 6vw;">Let's grow together !</h1>
 <p style="margin-left: 8%;">theknightmarketer@gmail.com</p>
