@@ -314,7 +314,7 @@
         max-width: 90vw;
         height: 40vw;
         overflow: hidden;
-        margin: 50px auto;
+        margin: 5px auto;
     }
 
     .accordion ul {
@@ -512,9 +512,10 @@
     }
     .section_4 {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         margin-top: 1%;
     }
+    
     .section_3_items {
         border: 2px solid #4d1044d0;
         text-align: center;
@@ -550,7 +551,7 @@
     }
 
     lottie-player {
-        width: 60vw;
+        width: 40vw;
     }
 
     #prevButton {
@@ -564,6 +565,18 @@
     .say_h2 {
         font-size: 2vw;
         margin: 1%;
+    }
+    .section_6 {
+        border: 2px solid #4d1044d0;
+       width: 90vw;
+       margin-left: 4vw;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.105);
+        box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
+        backdrop-filter: blur(1px);
+        position: relative;
+        z-index: 4;
+        backdrop-filter: blur(5px);
     }
    
     @media (min-width:500px) {
@@ -853,14 +866,15 @@
     </div>
 </div>
 
-<div class="video_img"><button id="openVideo"><img src="/static/video.webp" alt=""></button>
-    <button id="openVideo"><img src="/static/video.webp" alt=""></button></div>
+<div class="video_img">
+    <button id="openVideo"><img src="/static/Anuj.gif" alt=""></button>
+    <button id="openVideo_2"><img src="/static/Anjali.gif" alt=""></button>
+</div>
 
 <div class="video" id="videoModal">
     <div class="video-content">
         <span class="video_close" id="closeVideoModal">&times;</span>
-        <iframe title="vimeo-player" src="" width="100%" height="100%" frameborder="0" allowfullscreen
-            id="videoFrame"></iframe>
+        <iframe title="vimeo-player" src="" width="100%" height="100%" frameborder="0" allowfullscreen id="videoFrame"></iframe>
     </div>
 </div>
 
@@ -868,27 +882,35 @@
     var modal = document.getElementById("videoModal");
     var closeBtn = document.getElementById("closeVideoModal");
     var videoFrame = document.getElementById("videoFrame");
-    function openVideoPopup() {
+
+    function openVideoPopup(videoSrc) {
         modal.style.display = "block";
         videoFrame.style.width = "60vw";
         videoFrame.style.height = "40vw";
-        videoFrame.src = "https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1";
+        videoFrame.src = videoSrc;
     }
 
     function closeVideoPopup() {
         modal.style.display = "none";
         videoFrame.src = "";
     }
-    document.getElementById("openVideo").addEventListener("click", openVideoPopup);
+
+    document.getElementById("openVideo").addEventListener("click", function () {
+        openVideoPopup("https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1");
+    });
+
+    document.getElementById("openVideo_2").addEventListener("click", function () {
+        openVideoPopup("https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov");
+    });
+
     closeBtn.addEventListener("click", closeVideoPopup);
+
     window.addEventListener("click", function (event) {
         if (event.target == modal) {
             closeVideoPopup();
         }
     });
-
 </script>
-
 
 
 <div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
@@ -1073,12 +1095,12 @@
 
 
 <div class="section_6">
-    <p style="margin: 8%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
+    <p style="margin: 1%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
         we depend on each other. I put all my hard
         knowledge, <span class="multi">expertise & growth tricks to reach the top.</span> </p>
 </div>
 
-<h1 style="text-align: center;  z-index: 8; margin-top:6% ;">What People Say <span style="color: yellow;">About me</span> </h1>
+<h1 style="text-align: center;  z-index: 8; margin-top:8% ;">What People Say <span style="color: yellow;">About me</span> </h1>
 <div class="accordion">
     <ul>
         <li style="border-color: rgb(193, 183, 252);">
@@ -1101,16 +1123,7 @@
                 <p class="client"></p>
             </div>
         </li>
-        <li style="border-color: rgb(255, 213, 213);">
-            <div>
-                <h2 class="say_h2"> Amit Sharma </h2>
-                <p class="say_p" style="color:rgb(255, 213, 213);">About 1 year ago, our team reached out to Prasun. At that point to time we already met with few of fake Digital Marketing mangers which caused us low quality of work and huge amount of money waste. 
-                    After handover our work to Prasun, he did incredible and magical job. We got very good quality of work in very low cost. We are regularly in touch with him. He always use to guide us how we can enhance our services more and efficiently. 
-                    <br><br>
-                    We are very thankful and happy to have Prasun as a part of our Makeupaura team.</p>
-                <p class="client">CEO | MakeupAura</p>
-            </div>
-        </li>
+
         <li style="border-color: rgb(255, 182, 244);">
             <div>
                 <h2 class="say_h2"> Deepak Arora </h2>
@@ -1128,7 +1141,7 @@
     </ul>
 </div>
 
-<p style="z-index: 4; text-align:center; margin-top:2%; ">FEATURED IN</p>
+<p style="z-index: 4; text-align:center; margin-top:8%; ">FEATURED IN</p>
 <div class="logos">
     <div class="logos-slide">
         <img src="./static/logos/1.png" />
@@ -1180,7 +1193,7 @@
     });
 </script>
 
-<h1 style="margin-left: 4%; font-size: 6vw;">Let's grow together !</h1>
+<h1 style="margin-left: 4%; font-size: 6vw; margin-top: -4%;">Let's grow together !</h1>
 <p style="margin-left: 8%;">theknightmarketer@gmail.com</p>
 <div class="ani_button" style="justify-content: end; margin-right: 6%; margin-top: 2%">
     <a href="mailto:theknightmarketer@gmail.com">
