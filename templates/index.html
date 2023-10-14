@@ -200,6 +200,7 @@
         margin: 4%;
         z-index: 2;
         padding: 3%;
+        text-decoration: none;
     }
 
     @media (max-width:500px) {
@@ -528,7 +529,8 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         margin-top: 1%;
     }
-    .section_4 {
+    .section_4,
+    .canva {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         margin-top: 1%;
@@ -560,6 +562,17 @@
         position: relative;
         z-index: 4;
         backdrop-filter: blur(5px);
+    }
+    .canva_items {
+        margin: 10%;
+        width: 40vw;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    .canva_items img {
+        width: 40vw;
     }
 
     .section_5_items {
@@ -1120,7 +1133,25 @@
 </div>
 
 
-
+<div class="canva">
+    <div class="canva_items">
+        <img src="/static/canva.png" alt="">
+    </div>
+    <div class="canva_items">
+        
+    <p style="text-transform: capitalize; color: white;" >
+        I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
+        <span style="color: yellow;">designs.</span> 
+    </p>
+    <div class="ani_button" style="width: 40vw; margin-left: 1%;">
+        <a href="/canva">
+            <div class="ani_btn">
+                <p>SEE ALL MY DEDIGNS</p>
+            </div>
+        </a>
+    </div>
+    </div>
+</div>
 
 <div class="section_6">
     <p style="margin: 1%; color:#fff;  font-size: 2.8vw; ">I want to grow your business as I want to grow myself. I know
