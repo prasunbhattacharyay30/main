@@ -12,7 +12,8 @@
         @font-face {
             font-family: Satoshi;
             src: url(/static/Satoshi-Variable.ttf);
-          }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -150,7 +151,7 @@
         img {
             width: 42.5vw;
             margin: 2%;
-            
+
         }
 
         .design_see_more {
@@ -169,16 +170,34 @@
             }
         }
 
-        .foot {
-            margin: 4%;
-        }
+        footer {
 
-        .foot li {
-            padding: 1%;
-        }
-
-        .foot h4 {
             color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sitemap ul,
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sitemap ul li,
+        .contact ul li {
+            margin: 5px 0;
+        }
+
+        .sitemap a,
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sitemap a:hover,
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         @media (min-width:600px) {
@@ -201,49 +220,32 @@
 
     {% endblock %}
 
+
     <footer>
-        <div class="footer">
-            <div class="foot">
-                <h4>For Biz Owners</h4>
-                <ul>
-                    <li><a href="#">Work With Me</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Get To Know Me</a></li>
-                </ul>
-            </div>
-            <div class="foot">
-                <h4>For Freelancers</h4>
-                <ul>
-                    <li><a href="#">Free Roadmap For Freelancers</a></li>
-                    <li><a href="#">Freelance 101 Academy</a></li>
-                    <li><a href="#">Masterclasses</a></li>
-                </ul>
-            </div>
-            <div class="foot">
-                <h4>For Everyone</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Awesome Emails (Newsletter)</a></li>
-                    <li><a href="#">Saheli's Books Club</a></li>
-                </ul>
-            </div>
-            <div class="foot">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Access Your Courses</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                </ul>
-            </div>
-            <div class="foot">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                </ul>
-            </div>
+        <div class="sitemap">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/canva">Canva</a></li>
+                <li><a href="/about">About Me</a></li>
+            </ul>
         </div>
-        <p style="margin: 4%;">© 2023 Prasun Bhattacharyay. All right reserved.</p>
+        <div class="contact">
+            <ul>
+                <li style="color: yellow;" ><b>Contact Us</b></li>
+                <li> <a href="tel:+919563432724">
+                    Mobile: +919563432724
+                </a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Privacy Page</a></li>
+            </ul>
+        </div>
+
     </footer>
+    <div>
+        <p style="margin: 4%;">© 2023 Prasun Bhattacharyay. All right reserved.</p>
+    </div>
+
 </body>
 
 </html>
