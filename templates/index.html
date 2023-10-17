@@ -295,13 +295,15 @@
         display: flex;
         justify-content: center;
         z-index: 7;
+        margin: 2vw;
+        margin-bottom: -8vw;
     }
 
 
     .video_img img {
-        width: 40vw;
-        height: 22vw;
-        margin: 1vw;
+        width: 25vw;
+        height: 16vw;
+        margin: 0vw;
         z-index: 7;
 
 
@@ -935,6 +937,12 @@
         </a>
     </div>
 
+    <div class="video_a">
+        <a id="openVideo_3" href="javascript:void(0);"
+            onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
+            <img loading="lazy" src="/static/vid1.jpg" alt="">
+        </a>
+    </div>
 </div>
 
 <div class="video" id="videoModal">
@@ -944,6 +952,8 @@
             id="videoFrame"></iframe>
     </div>
 </div>
+
+
 
 <script>
     var modal = document.getElementById("videoModal");
@@ -968,6 +978,9 @@
 
     document.getElementById("openVideo_2").addEventListener("click", function () {
         openVideoPopup("https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov");
+    });
+    document.getElementById("openVideo_3").addEventListener("click", function () {
+        openVideoPopup("https://www.youtube.com/embed/MBgJWeQZohc?si=YIqbNobqYxvhP_JS");
     });
 
     closeBtn.addEventListener("click", closeVideoPopup);
