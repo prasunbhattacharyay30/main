@@ -323,18 +323,20 @@
     }
 
     .video_a {
-     
+
         width: 31.5vw;
         height: 30vw;
     }
+
     .video_a hr {
         border-color: #f125cc;
         margin-top: -0.4vw;
         width: 20vw;
         height: 1vw;
         margin-left: 1vw;
-        
+
     }
+
     .accordion {
         width: 100%;
         max-width: 90vw;
@@ -538,7 +540,8 @@
     }
 
     .section_4,
-    .canva {
+    .canva,
+    .ss {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         margin-top: 1%;
@@ -599,6 +602,8 @@
         display: none;
     }
 
+
+
     .say_p {
         font-size: 1.8vw;
         margin: 2%;
@@ -616,6 +621,41 @@
 
     .work img {
         width: 92vw;
+    }
+
+    .ctr-accordion {
+        max-width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around;
+        gap: 2px;
+        overflow: hidden;
+        margin: 11px auto;
+        margin-left: 4%;
+        margin-top: -20%;
+    }
+
+    .tab {
+        width: 20%;
+       
+        cursor: pointer;
+        transition: width .5s ease;
+
+    }
+
+    .tab img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+        border-radius: 25px;
+        margin-top: 10vw;
+    }
+
+    .tab:hover {
+        width: 100%;
     }
 
     @media (min-width:500px) {
@@ -736,7 +776,7 @@
             margin: 1%;
         }
 
-     
+
 
     }
 
@@ -825,10 +865,11 @@
             opacity: 0.8;
             z-index: 0;
         }
+
         .say_p {
-        font-size: 1.6vw;
-        margin: 2%;
-    }
+            font-size: 1.6vw;
+            margin: 2%;
+        }
     }
 </style>
 {% endblock %}
@@ -931,7 +972,7 @@
             onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
             <img loading="lazy" src="/static/anuj.jpg" alt="">
         </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; " >Anuj Goswami </h1>
+        <h1 style="font-size: 2vw; margin-left: 1vw; ">Anuj Goswami </h1>
         <hr>
 
     </div>
@@ -941,7 +982,7 @@
             onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
             <img loading="lazy" src="/static/anjali.jpg" alt="">
         </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; " >Anjali Pandey Giri</h1>
+        <h1 style="font-size: 2vw; margin-left: 1vw; ">Anjali Pandey Giri</h1>
         <hr>
     </div>
 
@@ -950,7 +991,7 @@
             onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
             <img loading="lazy" src="/static/vid1.jpg" alt="">
         </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; " >Irina Mladenova </h1>
+        <h1 style="font-size: 2vw; margin-left: 1vw; ">Irina Mladenova </h1>
         <hr>
     </div>
 </div>
@@ -1209,6 +1250,34 @@
 </div>
 
 
+<h1 id="work" style="text-align: center;  z-index: 8; margin-bottom: -6% ; margin-top:8% ;">Here is My Work Sample</h1>
+<div class="work">
+    <img loading="lazy" src="/static/work1.png" alt="">
+
+</div>
+<div class="ctr-accordion">
+    <div class="tab">
+        <img src="/static/hellomoney.png">
+    </div>
+    <div class="tab">
+        <img src="/static/cake.png">
+    </div>
+    <div class="tab">
+        <img src="/static/artedis.png">
+    </div>
+    <div class="tab">
+        <img src="/static/anjalibakery.png">
+    </div>
+    <div class="tab">
+        <img src="/static/bluclinics.png">
+    </div>
+    <div class="tab">
+        <img src="/static/deezy.png">
+    </div>
+</div>
+
+
+
 <h1 style="text-align: center;  z-index: 8; margin-top:8% ;">What People Say About Me</h1>
 <div class="accordion">
     <ul>
@@ -1259,20 +1328,6 @@
             </div>
         </li>
     </ul>
-</div>
-
-<h1 style="text-align: center;  z-index: 8; margin-bottom: -6% ; margin-top:8% ;">Here is My Work Sample</h1>
-<div class="work">
-    <img src="/static/work1.png" alt="">
- 
-
-<div class="ani_button" style="justify-content: center; margin-right: 6%; margin-top: -7vw">
-    <a href="/work">
-        <div class="ani_btn">
-            <p style="font-size: 1.4vw;">SEE MORE WORK SAMPLE</p>
-        </div>
-    </a>
-</div>
 </div>
 
 <p style="z-index: 4; text-align:center; margin-top:8%; ">FEATURED IN</p>
@@ -1338,5 +1393,11 @@
     </a>
 
 </div>
-
+<div class="ani_button" style="justify-content: center; margin-right: 6%; margin-top: -6vw">
+    <a href="/work">
+        <div class="ani_btn">
+            <p style="font-size: 1.4vw;">SEE MORE WORK SAMPLE</p>
+        </div>
+    </a>
+</div>
 {% endblock %}
