@@ -263,51 +263,7 @@
     @import url(http://fonts.googleapis.com/css?family=Open+Sans);
     @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 
-    .video {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 7;
-    }
 
-    .video-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 80%;
-        z-index: 7;
-    }
-
-    .video_close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .video_img {
-        display: flex;
-        justify-content: center;
-        z-index: 7;
-        margin: 2vw;
-        margin-bottom: -8vw;
-    }
-
-
-    .video_img img {
-        width: 30.5vw;
-        height: 18vw;
-        margin: 0vw;
-        z-index: 7;
-
-
-    }
 
     .section_6 {
         border: 2px solid #4d1044d0;
@@ -320,12 +276,6 @@
         position: relative;
         z-index: 4;
         backdrop-filter: blur(5px);
-    }
-
-    .video_a {
-
-        width: 31.5vw;
-        height: 30vw;
     }
 
     .video_a hr {
@@ -638,7 +588,7 @@
 
     .tab {
         width: 20%;
-       
+
         cursor: pointer;
         transition: width .5s ease;
 
@@ -776,7 +726,9 @@
             margin: 1%;
         }
 
-
+        .serv {
+        height: 18vw;
+    }
 
     }
 
@@ -870,8 +822,115 @@
             font-size: 1.6vw;
             margin: 2%;
         }
+        .serv {
+        height: 30vw;
     }
+    }
+
+    .video_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .content {
+        width: 90vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content .images {
+  
+        width: 100%;
+        position: relative;
+    }
+    .images {
+        display: grid;
+        justify-content: center;
+    }
+
+    .content .images img {
+        width: 88%;
+        margin-left: 6%;
+    }
+
+
+    .sliders {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4vw;
+        cursor: pointer;
+        border: 2px solid white;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .sliders:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .left {
+        left: 0;
+        /* Move the left slider button to the left side */
+    }
+
+    .right {
+        right: 0;
+    }
+
+    .sliders span {
+        line-height: 4vw;
+        font-size: 3vw;
+        color: white;
+    }
+
+    .video {
+        display: none;
+        position: fixed;
+        z-index: 7;
+        padding: 10%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .video-content {
+        position: relative;
+        background-color: #f2f2f2;
+        margin: auto;
+        padding: 0;
+        width: 60vw;
+        height: 40vw;
+    }
+
+    .video_close {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 35px;
+        cursor: pointer;
+        color: white;
+    }
+
+    iframe {
+        display: block;
+        margin: auto;
+    }
+
+    .video_a{
+        width: 60vw;
+     
+    }
+  
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 {% endblock %}
 {% block body %}
 <div class="ball_2"></div>
@@ -880,7 +939,7 @@
 <div class="title">
     <div class="title_child">
         <div class="title_items">
-            
+
             <section class="section_1">
                 <div class="section_1_child">
                     <div class="section_1_items">
@@ -916,7 +975,7 @@
     <div class="section_4_child">
         <div class="card">
             <lottie-player src="https://lottie.host/496a9cee-b166-4110-a9d8-7c5cfb3610f9/qBcyHT2hYT.json"
-                background="transparent" speed="1" direction="1" mode="normal" loop autoplay></lottie-player>
+                background="transparent" speed="1" class="serv" direction="1" mode="normal" loop autoplay></lottie-player>
             <h2>Performance Marketing</h2>
             <p>
                 Your brand deserves a legendary sales history. Experience the impact of performance marketing. It's time
@@ -962,44 +1021,52 @@
 </div>
 <h1 style="text-align: center;  z-index: 8; margin-top:8% ;">WORK EXPERIENCE WITH ME!</h1>
 <div class="video_img">
-    <div class="video_a">
-        <a id="openVideo" href="javascript:void(0);"
-            onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
-            <img loading="lazy" src="/static/anuj.jpg" alt="">
-        </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; ">Anuj Goswami </h1>
-        <hr>
+    <div class="content">
+        <div class="images">
+            <!-- Your video slides go here -->
+            <div class="video_a">
+                <a id="openVideo" href="javascript:void(0);"
+                    onclick="openVideoPopup('https://www.youtube.com/embed/G_IEFDhcJEg?si=VuwDNqL5hEl3r1w1')">
+                    <img loading="lazy" src="/static/anuj.jpg" alt="">
+                </a>
+                <h1 style="font-size: 2vw; margin-left: 1vw; ">Anuj Goswami</h1>
+                <hr>
+            </div>
 
+            <div class="video_a">
+                <a id="openVideo_2" href="javascript:void(0);"
+                    onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
+                    <img loading="lazy" src="/static/anjali.jpg" alt="">
+                </a>
+                <h1 style="font-size: 2vw; margin-left: 1vw; ">Anjali Pandey Giri</h1>
+                <hr>
+            </div>
+
+            <div class="video_a">
+                <a id="openVideo_3" href="javascript:void(0);"
+                    onclick="openVideoPopup('https://www.youtube.com/embed/MBgJWeQZohc?si=YIqbNobqYxvhP_JS')">
+                    <img loading="lazy" src="/static/vid1.jpg" alt="">
+                </a>
+                <h1 style="font-size: 2vw; margin-left: 1vw; ">Irina Mladenova</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="sliders left" onclick="side_slide(-1)">
+            <span class="fas fa-angle-left"></span>
+        </div>
+        <div style=" display: flex; justify-content: end;" class="sliders right" onclick="side_slide(1)">
+            <span class="fas fa-angle-right"></span>
+        </div>
     </div>
-
-    <div class="video_a">
-        <a id="openVideo_2" href="javascript:void(0);"
-            onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
-            <img loading="lazy" src="/static/anjali.jpg" alt="">
-        </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; ">Anjali Pandey Giri</h1>
-        <hr>
-    </div>
-
-    <div class="video_a">
-        <a id="openVideo_3" href="javascript:void(0);"
-            onclick="openVideoPopup('https://www.youtube.com/embed/iQnAkqmyXmM?si=5lV61eLrH87091ov')">
-            <img loading="lazy" src="/static/vid1.jpg" alt="">
-        </a>
-        <h1 style="font-size: 2vw; margin-left: 1vw; ">Irina Mladenova </h1>
-        <hr>
+    <div class="video" id="videoModal">
+        <div class="video-content">
+            <span class="video_close" id="closeVideoModal">&times;</span>
+            <iframe title="vimeo-player" src="" width="100%" height="100%" frameborder="0" allowfullscreen
+                id="videoFrame"></iframe>
+        </div>
     </div>
 </div>
-
-<div class="video" id="videoModal">
-    <div class="video-content">
-        <span class="video_close" id="closeVideoModal">&times;</span>
-        <iframe title="vimeo-player" src="" width="100%" height="100%" frameborder="0" allowfullscreen
-            id="videoFrame"></iframe>
-    </div>
-</div>
-
-
 
 <script>
     var modal = document.getElementById("videoModal");
@@ -1036,6 +1103,37 @@
             closeVideoPopup();
         }
     });
+
+    var indexValue = 1;
+    showImg(indexValue);
+
+    function btm_slide(e) {
+        showImg(indexValue = e);
+    }
+
+    function side_slide(e) {
+        showImg(indexValue += e);
+    }
+
+    function showImg(e) {
+        var i;
+        const img = document.querySelectorAll('.video_a');
+        const slider = document.querySelectorAll('.btm-slides span');
+        if (e > img.length) {
+            indexValue = 1
+        }
+        if (e < 1) {
+            indexValue = img.length
+        }
+        for (i = 0; i < img.length; i++) {
+            img[i].style.display = "none";
+        }
+        for (i = 0; i < slider.length; i++) {
+            slider[i].style.background = "rgba(255,255,255,0.1)";
+        }
+        img[indexValue - 1].style.display = "block";
+        slider[indexValue - 1].style.background = "white";
+    }
 </script>
 
 <div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
