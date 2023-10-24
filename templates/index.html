@@ -458,7 +458,7 @@
     .ball_2 {
         height: 130vw;
         width: 80vw;
-        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
+        border-radius: 90% 10% 41% 31% / 83% 30% 86% 32%;
         background-color: #3f0255;
         transform: translate(-20vw, -15vw);
         position: absolute;
@@ -473,6 +473,16 @@
         border-radius: 0% 100% 100% 0% / 0% 68% 69% 0%;
         background-color: #4b074e;
         transform: translate(-30px, -20vw);
+        position: absolute;
+        opacity: 0.8;
+        z-index: 0;
+    }
+    .ball_4 {
+        height: 20vw;
+        width: 50vw;
+        border-radius: 1% 0% 0% 60% / 40% 0% 0% 40%;
+        background-color: #4b074e;
+        transform: translate( 60vw, -30vw);
         position: absolute;
         opacity: 0.8;
         z-index: 0;
@@ -1165,7 +1175,7 @@
     }
 </script>
 
-<div class="ball_1m" style="transform: translate(-0px, 180vw);"></div>
+<div class="ball_1m" style="transform: translate(-0px, 85vw);"></div>
 <button id="prevButton"
     style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b>
             < </b></span></button>
@@ -1272,7 +1282,7 @@
         </div>
     </div>
 </div>
-<div class="ball_1m"></div>
+
 <div class="ball_1"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1373,7 +1383,7 @@
         knowledge, <span class="multi">expertise & growth tricks to reach the top.</span> </p>
 </div>
 
-<div class="ball_1"></div>
+<div class="ball_4"></div>
 <h1 id="work" style="text-align: center;  z-index: 8; margin-bottom: -6% ; margin-top:8% ;">Here is My Work Sample</h1>
 <div class="work">
     <img style="z-index: 8;" loading="lazy" src="/static/work1.png" alt="">
