@@ -1223,20 +1223,20 @@
 <script>
  window.addEventListener('scroll', function() {
   var scrollToTopButton = document.getElementById("scrollToTopBtn");
-  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  var scrollPosition = window.scrollY || window.pageYOffset; // Use window.pageYOffset for broader compatibility
 
-  if (scrollPosition > viewportHeight * 0.8) { // 20% of the viewport height
+  if (scrollPosition > 0.8 * window.innerHeight) { // Show the button after scrolling 80% of the viewport height
     scrollToTopButton.style.display = "block";
   } else {
     scrollToTopButton.style.display = "none";
   }
 });
 
-
 function scrollToTop() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // To enable smooth scrolling
+  });
 }
 
 </script>
