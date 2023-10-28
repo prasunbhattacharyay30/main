@@ -1221,16 +1221,18 @@
 <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
 
 <script>
-    window.addEventListener('scroll', function() {
+ window.addEventListener('scroll', function() {
   var scrollToTopButton = document.getElementById("scrollToTopBtn");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  if (scrollPosition > 3000) { 
+  if (scrollPosition > viewportHeight * 6) { // 20% of the viewport height
     scrollToTopButton.style.display = "block";
   } else {
     scrollToTopButton.style.display = "none";
   }
 });
+
 
 function scrollToTop() {
   document.body.scrollTop = 0; 
