@@ -1221,11 +1221,11 @@
 <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
 
 <script>
- window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
   var scrollToTopButton = document.getElementById("scrollToTopBtn");
-  var scrollPosition = window.scrollY || window.pageYOffset; // Use window.pageYOffset for broader compatibility
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollPosition > 0.8 * window.innerHeight) { // Show the button after scrolling 80% of the viewport height
+  if (scrollPosition > 3000) { 
     scrollToTopButton.style.display = "block";
   } else {
     scrollToTopButton.style.display = "none";
@@ -1233,10 +1233,8 @@
 });
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth" // To enable smooth scrolling
-  });
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
 }
 
 </script>
