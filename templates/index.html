@@ -478,16 +478,18 @@
         opacity: 0.8;
         z-index: 0;
     }
+
     .ball_4 {
         height: 20vw;
         width: 50vw;
         border-radius: 1% 0% 0% 60% / 40% 0% 0% 40%;
         background-color: #4b074e;
-        transform: translate( 60vw, -30vw);
+        transform: translate(60vw, -30vw);
         position: absolute;
         opacity: 0.8;
         z-index: 0;
     }
+
     .ball_5 {
         height: 40vw;
         width: 60vw;
@@ -634,12 +636,33 @@
         width: 100%;
     }
 
+    #scrollToTopBtn {
+  display: none; 
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  z-index: 99;
+  font-size: 1vw;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 1vw;
+  border-radius: 4px;
+  opacity: 6;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
     @media (min-width:500px) {
         #prevButton {
             display: block;
         }
 
-
+      
         .section_3 {
             display: flex;
             flex-direction: row;
@@ -788,6 +811,9 @@
             text-align: left;
             font-size: 6vw;
         }
+        #scrollToTopBtn {
+            font-size: 2vw;
+        }
 
         h1,
         h2 {
@@ -822,10 +848,11 @@
         }
 
         .ball_2 {
-            height: 240vw;
+            height: 80vw;
             width: 180vw;
-            transform: translate(-120vw, 28vw);
+            transform: translate(-120vw, -8vw);
         }
+
 
         .ball_1m {
             height: 100vw;
@@ -846,6 +873,18 @@
             transform: translate(-0px, -233vw);
             position: absolute;
             opacity: 0.8;
+            z-index: 0;
+        }
+
+        .ball_3m {
+            height: 160vw;
+            width: 80vw;
+            border-radius: 90% 10% 41% 31% / 83% 30% 86% 32%;
+            background-color: #3f0255;
+            transform: translate(20vw, -15vw);
+            position: absolute;
+            opacity: 0.8;
+            filter: blur(6vw);
             z-index: 0;
         }
 
@@ -965,6 +1004,9 @@
         width: 75vw;
 
     }
+
+ 
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 {% endblock %}
@@ -1006,7 +1048,7 @@
     </div>
 </div>
 <h1 style="text-align: center;  z-index: 8; margin-top:6% ;">Services I Offer</h1>
-
+<div class="ball_3m"></div>
 <div class="section_4" style="margin-top:2% ;">
     <div class="section_4_child">
         <div class="card">
@@ -1176,11 +1218,32 @@
     }
 </script>
 
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
+
+<script>
+    window.addEventListener('scroll', function() {
+  var scrollToTopButton = document.getElementById("scrollToTopBtn");
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollPosition > 4000) { 
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+});
+
+function scrollToTop() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
 <div class="ball_1m" style="transform: translate(-0px, 85vw);"></div>
 <button id="prevButton"
     style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b>
             < </b></span></button>
 <div class="section_3">
+ 
 
     <div class="section_3_items">
         <div class="left-content">
@@ -1344,10 +1407,13 @@
 
 <div class="section_5">
     <div class="section_5_items" style=" z-index: 2;">
-        <h2 data-aos="fade-left"  data-aos-duration="3000"  data-aos-offset="200" style="font-size: 10vw;">Business Needs</h2>
-        <h2 data-aos="fade-right"  data-aos-duration="3000"  data-aos-offset="200" style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
+        <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-offset="200" style="font-size: 10vw;">Business Needs
+        </h2>
+        <h2 data-aos="fade-right" data-aos-duration="3000" data-aos-offset="200"
+            style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
             & <span style="color: yellow;">Care!</span> </h2>
-        <p data-aos="zoom-in-down"  data-aos-duration="3000"  data-aos-offset="200" style="margin-top: 10%;  z-index: 2;">"The strategy Defines The Path, The goal Defines The Destination, and
+        <p data-aos="zoom-in-down" data-aos-duration="3000" data-aos-offset="200" style="margin-top: 10%;  z-index: 2;">
+            "The strategy Defines The Path, The goal Defines The Destination, and
             action Defines
             That You Are Growing "
         </p>
@@ -1358,11 +1424,13 @@
 
 <div class="canva">
     <div class="canva_items">
-        <img data-aos="flip-up"  data-aos-duration="3000"  data-aos-offset="200" loading="lazy" src="/static/canva.png" alt="">
+        <img data-aos="flip-up" data-aos-duration="3000" data-aos-offset="200" loading="lazy" src="/static/canva.png"
+            alt="">
     </div>
     <div class="canva_items">
 
-        <p data-aos="zoom-in-down"  data-aos-duration="3000"  data-aos-offset="250" style="text-transform: capitalize; color: white;">
+        <p data-aos="zoom-in-down" data-aos-duration="3000" data-aos-offset="250"
+            style="text-transform: capitalize; color: white;">
             I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
             <span style="color: yellow;">designs.</span>
         </p>
@@ -1410,11 +1478,15 @@
 </div>
 <div style="width: 10vw; height: 10vw;  transform: translate(30px, -10vw);" class="ball_5"></div>
 <div style="width: 10vw; height: 10vw;  transform: translate(88vw, -30vw);" class="ball_5"></div>
-<div style="width: 5vw; height: 5vw;  transform: translate(58vw, -25vw); background-color: yellow;" class="ball_5"></div>
-<div style="width: 5vw; height: 5vw;  transform: translate(25vw, -22vw); background-color: rgb(255, 0, 234);" class="ball_5"></div>
+<div style="width: 5vw; height: 5vw;  transform: translate(58vw, -25vw); background-color: yellow;" class="ball_5">
+</div>
+<div style="width: 5vw; height: 5vw;  transform: translate(25vw, -22vw); background-color: rgb(255, 0, 234);"
+    class="ball_5"></div>
 <div style="width: 5vw; height: 5vw;  transform: translate(92vw, -5vw); background-color: yellow;" class="ball_5"></div>
-<div style="width: 15vw; height: 15vw;  transform: translate(3vw, -40vw); background-color: yellow;" class="ball_5"></div>
-<div style="width: 18vw; height: 18vw;  transform: translate(54vw, -4vw); background-color: rgb(255, 0, 212);" class="ball_5"></div>
+<div style="width: 15vw; height: 15vw;  transform: translate(3vw, -40vw); background-color: yellow;" class="ball_5">
+</div>
+<div style="width: 18vw; height: 18vw;  transform: translate(54vw, -4vw); background-color: rgb(255, 0, 212);"
+    class="ball_5"></div>
 <div style="width: 3vw; height: 3vw;  transform: translate(30vw, -6vw); background-color: yellow;" class="ball_5"></div>
 
 
@@ -1535,6 +1607,6 @@
 </div>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 {% endblock %}
