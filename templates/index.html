@@ -1226,7 +1226,7 @@
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  if (scrollPosition > viewportHeight * 6) { // 20% of the viewport height
+  if (scrollPosition > viewportHeight * 0.8) { // 20% of the viewport height
     scrollToTopButton.style.display = "block";
   } else {
     scrollToTopButton.style.display = "none";
