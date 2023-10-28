@@ -220,7 +220,7 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            animation: splash 2.8s ;
+            animation: splash 2.8s forwards;
         }
 
         @keyframes splash {
@@ -284,11 +284,13 @@
     </div>
 
     <script>
-        window.addEventListener('load', function () {
+             window.addEventListener('load', function () {
             var splashScreen = document.getElementById('splash-screen');
-            setTimeout(function () {
+            setTimeout(function() {
                 splashScreen.style.display = 'none';
-            }, 3000);
+                document.getElementById('main-content').style.display = 'block'; // Show main content
+                document.body.style.overflow = 'auto'; // Restore scrollbar
+            }, 3000); // 3000 milliseconds = 3 seconds
         });
     </script>
 
