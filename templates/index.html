@@ -3,6 +3,48 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>
+    .title {
+        width: 100%;
+        margin-top: 4%;
+    }
+
+    .title_child,
+    .section_3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title_items img {
+        text-align: center;
+        padding: 0px 0px;
+        opacity: 0.01;
+        transform: translateY(30px);
+        animation: moveup 2.0s linear forwards;
+        z-index: 1;
+    }
+
+    @keyframes moveup {
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .title_items img {
+        width: 38vw;
+        animation-delay: 3s;
+    }
+
+    .title_items_role {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        margin-left: 6%;
+        font-size: 55vw;
+    }
+
+
     @keyframes slide {
         from {
             transform: translateX(0);
@@ -12,6 +54,7 @@
             transform: translateX(-100%);
         }
     }
+
 
     .logos {
         overflow: hidden;
@@ -268,8 +311,8 @@
 
     .section_6 {
         border: 2px solid #4d1044d0;
-        width: 90vw;
-        margin-left: 4vw;
+        width: 80vw;
+        margin-left: 10vw;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.105);
         box-shadow: 0 1px 1px rgba(235, 233, 233, 0.71);
@@ -548,8 +591,13 @@
         backdrop-filter: blur(5px);
     }
 
+    .canva {
+        margin-left: 10vw;
+        margin-bottom: 4vw;
+    }
+
     .canva_items {
-        margin: 10%;
+        margin: 2%;
         width: 40vw;
         display: grid;
         justify-content: center;
@@ -565,6 +613,8 @@
         margin: 2%;
         padding: 2%;
         z-index: 1;
+        width: 80vw;
+        margin-left: 10VW;
     }
 
     lottie-player {
@@ -593,11 +643,11 @@
     }
 
     .work img {
-        width: 92vw;
+        width: 80vw;
     }
 
     .ctr-accordion {
-        max-width: 100vw;
+        max-width: 80vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -637,32 +687,33 @@
     }
 
     #scrollToTopBtn {
-  display: none; 
-  position: fixed;
-  bottom: 2vw;
-  right: 2vw;
-  z-index: 99;
-  font-size: 1vw;
-  border: none;
-  outline: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  padding: 1vw;
-  border-radius: 4px;
-  opacity: 6;
-}
+        display: none;
+        position: fixed;
+        bottom: 2vw;
+        right: 2vw;
+        z-index: 99;
+        font-size: 1vw;
+        border: none;
+        outline: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        padding: 1vw;
+        border-radius: 4px;
+        opacity: 6;
+    }
 
-#scrollToTopBtn:hover {
-  background-color: #555;
-}
+    #scrollToTopBtn:hover {
+        background-color: #555;
+    }
 
     @media (min-width:500px) {
         #prevButton {
             display: block;
+
         }
 
-      
+
         .section_3 {
             display: flex;
             flex-direction: row;
@@ -672,11 +723,11 @@
 
 
         .section_3_items img {
-            width: 50vw;
+            width: 38vw;
         }
 
         lottie-player {
-            width: 20vw;
+            width: 17vw;
         }
 
         .section_4 {
@@ -691,7 +742,7 @@
 
         .section_4 p,
         .section_3 p {
-            font-size: 1.2vw;
+            font-size: 1vw;
         }
 
         .left-content img {
@@ -811,6 +862,15 @@
             text-align: left;
             font-size: 6vw;
         }
+
+        .work img {
+            width: 96vw;
+        }
+
+        .ctr-accordion {
+            max-width: 100vw;
+        }
+
         #scrollToTopBtn {
             font-size: 2vw;
         }
@@ -1006,10 +1066,8 @@
     }
 
     html {
-  scroll-behavior: smooth;
-}
-
-
+        scroll-behavior: smooth;
+    }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 {% endblock %}
@@ -1103,7 +1161,7 @@
         </div>
     </div>
 </div>
-<h1 style="text-align: center;  font-size: 6vw; z-index: 6; margin-top:8% ;">WORK EXPERIENCE WITH ME!</h1>
+<h1 style="text-align: center;  font-size: 4vw; z-index: 6; margin-top:8% ;">WORK EXPERIENCE WITH ME!</h1>
 <div class="video_img">
     <div class="content">
         <div class="images">
@@ -1225,28 +1283,28 @@
 <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
 
 <script>
-    window.addEventListener('scroll', function() {
-  var scrollToTopButton = document.getElementById("scrollToTopBtn");
-  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener('scroll', function () {
+        var scrollToTopButton = document.getElementById("scrollToTopBtn");
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollPosition > 3000) { 
-    scrollToTopButton.style.display = "block";
-  } else {
-    scrollToTopButton.style.display = "none";
-  }
-});
+        if (scrollPosition > 3000) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
 
-function scrollToTop() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0;
-}
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
 </script>
 <button id="prevButton"
-    style="transform: translate(0.1vw, 26.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b>
+    style="transform: translate(-1vw, 16.4vw); width: 2vw; height: 2vw; border-radius: 50%; background-color: yellow;  z-index: 4; "><span><b>
             < </b></span></button>
 <div class="section_3">
- 
+
 
     <div class="section_3_items">
         <div class="left-content">
@@ -1409,9 +1467,9 @@ function scrollToTop() {
 
 <div class="section_5">
     <div class="section_5_items" style=" z-index: 2;">
-        <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-offset="200" style="font-size: 10vw;">Business Needs
+        <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-offset="150" style="font-size: 8vw;">Business Needs
         </h2>
-        <h2 data-aos="fade-right" data-aos-duration="3000" data-aos-offset="200"
+        <h2 data-aos="fade-right" data-aos-duration="3000" data-aos-offset="150"
             style="text-align: right; font-size: 7vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper Attention
             & <span style="color: yellow;">Care!</span> </h2>
         <p data-aos="zoom-in-down" data-aos-duration="3000" data-aos-offset="200" style="margin-top: 10%;  z-index: 2;">
@@ -1426,13 +1484,11 @@ function scrollToTop() {
 
 <div class="canva">
     <div class="canva_items">
-        <img  loading="lazy" src="/static/canva.png"
-            alt="">
+        <img loading="lazy" src="/static/canva.png" alt="">
     </div>
     <div class="canva_items">
 
-        <p
-            style="text-transform: capitalize; color: white;">
+        <p style="text-transform: capitalize; color: white;">
             I turn concepts into eye-catching & informative visuals. Canva, one of the finest tool to implement
             <span style="color: yellow;">designs.</span>
         </p>
@@ -1452,7 +1508,7 @@ function scrollToTop() {
         knowledge, <span class="multi">expertise & growth tricks to reach the top.</span> </p>
 </div>
 
-<h1 id="work" style="text-align: center;  z-index: 8; margin-bottom: -6% ; margin-top:8% ;">Here is My Work Sample</h1>
+<h1 id="work" style="text-align: center;  z-index: 8; margin-bottom: -2% ; margin-top:8% ;">Here is My Work Sample</h1>
 <div class="work">
     <img style="z-index: 8;" loading="lazy" src="/static/work1.png" alt="">
 

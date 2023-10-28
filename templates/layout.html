@@ -68,7 +68,7 @@
             margin-left: 2%;
             margin-top: 2%;
             margin-bottom: 2%;
-            color: papayawhip;
+            color: rgb(255, 255, 255);
             text-align: left;
             line-height: 1.6;
         }
@@ -88,47 +88,7 @@
             font-size: 3vw;
         }
 
-        .title {
-            width: 100%;
-            margin-top: 4%;
-        }
-
-        .title_child,
-        .section_3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            justify-content: center;
-            align-items: center;
-        }
-
-        .title_items img {
-            text-align: center;
-            padding: 0px 0px;
-            opacity: 0.01;
-            transform: translateY(30px);
-            animation: moveup 1.0s linear forwards;
-            z-index: 1;
-        }
-
-        @keyframes moveup {
-            100% {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-
-        .title_items img {
-            width: 45vw;
-            animation-delay: 1.4s;
-        }
-
-        .title_items_role {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-            margin-left: 6%;
-            font-size: 55vw;
-        }
-
+        
         .multi {
             background-image: linear-gradient(43deg, #d0a541 0%, #C850C0 46%, #FFCC70 100%);
             -webkit-background-clip: text;
@@ -164,9 +124,16 @@
             padding: 2%;
             color: aquamarine;
         }
-
-
-        @media (max-width:500px) {
+      @media (min-width: 700px) {
+        .container {
+            width: calc(100% - 10vw); /* Adjust the width based on the gap you need */
+            margin: 0 auto;
+            padding: 0 50px; /* Adjust this for the left and right gaps */
+        }
+      }
+        @media (max-width:500px)
+        
+        {
 
 
             .design_child {
@@ -228,31 +195,39 @@
                 height: 100%;
             }
 
-            70% {height: 100%; opacity: 0.9;}
-            100% {height: 0%; opacity: 0;}
+            70% {
+                height: 100%;
+                opacity: 0.9;
+            }
+
+            100% {
+                height: 0%;
+                opacity: 0;
+            }
         }
 
         #splash-screen img {
-            max-width: 200px;
-            /* Adjust based on your logo size */
+            max-width: 200px
         }
     </style>
     {% block head %}{% endblock %}
 </head>
 
 <body>
-
-<div id="splash-screen">
-    <img src="path_to_your_logo" alt="Your Logo">
-    <h1 > I am Prasun
-        Bhattacharyay</h1>
-</div>
+    <div id="splash-screen">
+        <img src="path_to_your_logo" alt="Your Logo">
+        <h1> I am Prasun
+            Bhattacharyay</h1>
+    </div>
     <nav>
         <a href="/">Home</a>
         <a href="#work">Work</a>
         <a href="/canva">Canva</a>
         <a class="multi" href="/about">About Me</a>
     </nav>
+    <div class="container">
+
+   
     {% block body %}
 
     {% endblock %}
@@ -284,16 +259,16 @@
     </div>
 
     <script>
-             window.addEventListener('load', function () {
+        window.addEventListener('load', function () {
             var splashScreen = document.getElementById('splash-screen');
-            setTimeout(function() {
+            setTimeout(function () {
                 splashScreen.style.display = 'none';
                 document.getElementById('main-content').style.display = 'block'; // Show main content
                 document.body.style.overflow = 'auto'; // Restore scrollbar
             }, 3000); // 3000 milliseconds = 3 seconds
         });
     </script>
-
+</div>
 </body>
 
 </html>
