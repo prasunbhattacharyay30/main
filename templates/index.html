@@ -215,7 +215,7 @@
         align-items: left;
         margin-left: 4%;
         margin-top: 6%;
-       
+
     }
 
     .ani_btn {
@@ -278,13 +278,14 @@
         transform: scale(0);
         transition: transform 0.2s;
     }
+
     .ani_btn:hover::before {
         background: linear-gradient(#1406da, #cd03ff, #b300b356, #b300b37b, #ff33cf32, #21b8f39d, #fc4e88a2);
         box-shadow: 0px 10px 20px rgba(255, 254, 254, 0.543);
         margin-bottom: 10%;
         width: 400px;
         height: 330px;
-}
+    }
 
     .ani_btn::after {
         content: '';
@@ -296,10 +297,10 @@
         border-width: 1px;
         border-radius: 12px;
     }
-   
-.ani_btn:hover::after {
-    background-color: transparent; 
-}
+
+    .ani_btn:hover::after {
+        background-color: transparent;
+    }
 
     @keyframes rotate {
         from {
@@ -606,7 +607,7 @@
     .canva {
         margin-left: 4vw;
         margin-bottom: 4vw;
-       
+
     }
 
     .canva_items {
@@ -726,23 +727,23 @@
         }
 
         .canva {
-        margin-left: 10vw;
-        margin-bottom: 4vw;
-       margin-right: 4vw;
-       
-    }
+            margin-left: 10vw;
+            margin-bottom: 4vw;
+            margin-right: 4vw;
 
-    .canva_items {
-        width: 40vw;
-        display: grid;
-        justify-content: center;
-        align-items: center;
+        }
 
-    }
+        .canva_items {
+            width: 40vw;
+            display: grid;
+            justify-content: center;
+            align-items: center;
 
-    .canva_items img {
-        width: 40vw;
-    }
+        }
+
+        .canva_items img {
+            width: 40vw;
+        }
 
         .ani_btn {
             width: 20vw;
@@ -868,6 +869,11 @@
             height: 17vw;
         }
 
+        .left-content {
+            width: 40vw;
+            margin-right: 4vw;
+        }
+
     }
 
     .slider-container {
@@ -897,13 +903,14 @@
             font-size: 6vw;
         }
 
-        .section_6, .canva,
+        .section_6,
+        .canva,
         .section_5_items {
             width: 94vw;
             margin-left: 3vw;
         }
 
-      
+
 
         .work img {
             width: 96vw;
@@ -1159,7 +1166,7 @@
             <lottie-player src="https://lottie.host/496a9cee-b166-4110-a9d8-7c5cfb3610f9/qBcyHT2hYT.json"
                 background="transparent" speed="1" class="serv" direction="1" mode="normal" loop
                 autoplay></lottie-player>
-            <h2 class="servh1" >Performance Marketing</h2>
+            <h2 class="servh1">Performance Marketing</h2>
             <p>
                 Your brand deserves a legendary sales history. Experience the impact of performance marketing. It's time
                 to outperform, outshine, and outgrow your competition.
@@ -1209,7 +1216,7 @@
     <div class="content">
         <div class="images">
             <!-- Your video slides go here -->
-            
+
 
             <div class="video_a">
                 <a id="openVideo_2" href="javascript:void(0);"
@@ -1352,7 +1359,7 @@
 
 
     <div class="section_3_items">
-        <div style="width: 40vw; margin-right: 4vw;" class="left-content">
+        <div class="left-content">
 
             <h1 style="margin-left: 0.8vw;">GROW YOUR REVENUE & ROI!</h1>
             <img loading="lazy" src="/static/roi.png" alt="">
@@ -1386,7 +1393,7 @@
         </div>
     </div>
     <div class="section_3_items">
-        <div style="width: 40vw; margin-right: 4vw;" class="left-content">
+        <div class="left-content">
             <h1 style="margin-left: 0.8vw;">SOLUTION TO PAIN OF INCOMPLETE TASKS!</h1>
             <img loading="lazy" src="/static/learning.png" alt="">
             <p> Business is not about thoughts, it's all about implementation! The priority activities set our goal to a
@@ -1416,8 +1423,8 @@
         </div>
     </div>
     <div class="section_3_items">
-        <div style="width: 40vw; margin-right: 4vw;" class="left-content">
-            <h1 style="margin-left: 0.8vw;" >GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
+        <div class="left-content">
+            <h1 style="margin-left: 0.8vw;">GROW YOUR KNOWLEDGE WITH ME WITHOUT ANY INVESTMENT!</h1>
             <img loading="lazy" src="/static/time.png" alt="">
             <p> Many small businesses have the potential to drive more sales & growth. By learning the lost points of
                 firms,
@@ -1448,7 +1455,7 @@
             </div>
         </div>
         <div class="right-content">
-            <img style="width: 32vw; margin-left: 4vw;"  loading="lazy" src="/static/time.png" alt="">
+            <img style="width: 32vw; margin-left: 4vw;" loading="lazy" src="/static/time.png" alt="">
         </div>
     </div>
 </div>
@@ -1512,11 +1519,13 @@
 
 <div class="section_5">
     <div class="section_5_items" style=" z-index: 2;">
-        <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-offset="150" style="font-size: 6vw; font-weight: 300;">Business Needs
+        <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-offset="150"
+            style="font-size: 6vw; font-weight: 300;">Business Needs
         </h2>
         <h2 data-aos="fade-right" data-aos-duration="3000" data-aos-offset="150"
-            style="text-align: right; font-size: 5vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper 
-           <span style="color: yellow;"><b>Attention  &  Care!</b></span> </h2>
+            style="text-align: right; font-size: 5vw;  font-weight: 300; margin-top: 3%;  z-index: 4; ">Proper
+            <span style="color: yellow;"><b>Attention & Care!</b></span>
+        </h2>
         <p data-aos="zoom-in-down" data-aos-duration="3000" data-aos-offset="150" style="margin-top: 10%;  z-index: 2;">
             "The strategy Defines The Path, The goal Defines The Destination, and
             action Defines
@@ -1539,8 +1548,8 @@
         </p>
         <div class="ani_button" style="width: 40vw; margin-left: 1%;">
             <a href="/canva">
-                <div class="ani_btn" style="width: 25vw;"  >
-                    <p >SEE ALL MY DEDIGNS</p>
+                <div class="ani_btn" style="width: 25vw;">
+                    <p>SEE ALL MY DEDIGNS</p>
                 </div>
             </a>
         </div>
@@ -1685,7 +1694,8 @@
     });
 </script>
 
-<h1 style="margin-left: 5%; font-weight: 200; font-size: 4vw; margin-top: 4%; margin-bottom: -4%;"><b>Let's grow together !</b></h1>
+<h1 style="margin-left: 5%; font-weight: 200; font-size: 4vw; margin-top: 4%; margin-bottom: -4%;"><b>Let's grow
+        together !</b></h1>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
