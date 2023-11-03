@@ -5,7 +5,7 @@
 <style>
     .title {
         width: 100%;
-        margin-top: 8%;
+        margin-top: 4%;
     }
 
     .title_child,
@@ -33,7 +33,7 @@
     }
 
     .title_items img {
-        width: 38vw;
+        width: 45vw;
         animation-delay: 2s;
     }
 
@@ -104,9 +104,13 @@
     .section_1_items.animate h1 {
         animation: h1tag 4s;
         text-align: left;
-        font-size: 1.9vw;
+        font-size: 2.6vw;
     }
-
+    .section_1_items.animate h2 {
+        animation: h1tag 4s;
+        text-align: left;
+        font-size: 1.6vw;
+    }
     @keyframes h1tag {
         0% {
             transform: translateX(-100vw);
@@ -125,8 +129,9 @@
         animation: ptag 3s;
         font-size: 1.4vw;
         margin: 0%;
-        margin-top: 2%;
+        margin-top: -2%;
         opacity: 0.9;
+        font-weight: 200;
     }
 
     .section_1_items.animate .p2 {
@@ -135,6 +140,7 @@
         margin: 0%;
         margin-top: -2%;
         opacity: 0.9;
+        font-weight: 200;
     }
 
     .section_1_items.animate .p3 {
@@ -143,6 +149,7 @@
         margin: 0%;
         margin-top: -2%;
         opacity: 0.9;
+        font-weight: 200;
     }
 
     @keyframes ptag {
@@ -161,7 +168,6 @@
 
     .section_1_items.animate .start {
         text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 4vw;
         padding: 2%;
         opacity: .9;
@@ -250,7 +256,6 @@
 
     .ani_btn p {
         font-size: 2vw;
-       
         margin: 4%;
         z-index: 2;
         padding: 3%;
@@ -355,7 +360,7 @@
 
     .accordion {
         width: 100%;
-        max-width: 90vw;
+        max-width: 94vw;
         height: 45vw;
         overflow: hidden;
         margin: 5px auto;
@@ -591,6 +596,7 @@
         margin: 4%;
         padding: 4%;
         border-radius: 2vw;
+
         z-index: 4;
         backdrop-filter: blur(20px);
     }
@@ -665,11 +671,12 @@
     }
 
     .work img {
-        width: 80vw;
+        width: 90vw;
+        margin-left: 4vw;
     }
 
     .ctr-accordion {
-        max-width: 80vw;
+        max-width: 92vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -732,6 +739,7 @@
     @media (min-width:500px) {
         #prevButton {
             display: block;
+            margin-left: 4%;
 
         }
 
@@ -763,6 +771,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            margin-left: 6%;
         }
 
 
@@ -907,9 +916,9 @@
     }
 
     @media (max-width:500px) {
-        .section_1_items.animate h2 {
+        .section_1_items.animate h1 {
             text-align: left;
-            font-size: 6vw;
+            font-size: 10vw;
         }
 
         .section_6,
@@ -1018,6 +1027,15 @@
         .serv1 {
             height: 40vw;
         }
+
+        .s1 {
+            font-size: 1vw;
+        }
+
+        .section_1_items.animate h2 {
+       
+        font-size: 3vw;
+    }
     }
 
     .video_img {
@@ -1141,9 +1159,9 @@
             <section class="section_1">
                 <div class="section_1_child">
                     <div class="section_1_items">
-                        <h1 style="font-size: 2.4vw; font-weight: 800;" >IT'S EASIER TO DOUBLE YOUR BUSINESS ONLINE!
+                        <h1 class="s1" >IT'S EASIER TO DOUBLE YOUR BUSINESS ONLINE!
                         </h1>
-                        <h1 style="font-size: 1.4vw; opacity: 0.9; font-weight: 200;" >I Will Help Your Brand To Stand Out With A Proven Strategy. I'll Boost Your ROI, Brand Reach, And Identity. Don't Be So Late To Take Action Online.</h1>
+                        <h2 class="s2" style=" opacity: 0.9; font-weight: 200;" >I Will Help Your Brand To Stand Out With A Proven Strategy. I'll Boost Your ROI, Brand Reach, And Identity. Don't Be So Late To Take Action Online.</h2>
                         <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Where is your
                             business now ?</p>
                         <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is it stagnating ?
@@ -1644,6 +1662,13 @@
                 <p class="say_p" style="color:rgb(216, 182, 255);">Prasun is a mastermind of marketing! From performance
                     to branding marketing, he just played an awesome role. </p>
                 <p class="client"> Dipanjan Dev : Neurotherapy Nirogalaya</p>
+            </div>
+        </li>
+        <li style="border-color: rgb(216, 182, 255);">
+            <div>
+                <p class="say_p" style="color:rgb(216, 182, 255);">Prasun is one of the finest marketer. He is highly recommended! He is doing good work! </p>
+                <p class="client"> Ranjit Gohal :
+                    Digital Layout</p>
             </div>
         </li>
     </ul>

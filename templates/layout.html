@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Poppins&display=swap" rel="stylesheet">
     <title>
         RealOne
     </title>
     <style>
-      
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter Tight', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -69,6 +68,7 @@
             color: rgb(255, 255, 255);
             text-align: left;
             line-height: 1.6;
+
         }
 
         h1,
@@ -79,14 +79,14 @@
             font-weight: 520;
             text-align: left;
             text-transform: capitalize;
-            line-height: 1.4;  
+            line-height: 1.4;
         }
 
         h1 {
             font-size: 3vw;
         }
 
-        
+
         .multi {
             background-image: linear-gradient(43deg, #d0a541 0%, #C850C0 46%, #FFCC70 100%);
             -webkit-background-clip: text;
@@ -122,16 +122,18 @@
             padding: 2%;
             color: aquamarine;
         }
-      @media (min-width: 700px) {
-        .container {
-            width: calc(100% - 10vw); /* Adjust the width based on the gap you need */
-            margin: 0 auto;
-            padding: 0 50px; /* Adjust this for the left and right gaps */
+
+        @media (min-width: 700px) {
+            .container {
+                width: calc(100% - 10vw);
+                /* Adjust the width based on the gap you need */
+                margin: 0 auto;
+                padding: 0 50px;
+                /* Adjust this for the left and right gaps */
+            }
         }
-      }
-        @media (max-width:500px)
-        
-        {
+
+        @media (max-width:500px) {
 
 
             .design_child {
@@ -218,13 +220,12 @@
         <a href="/canva">Canva</a>
         <a class="multi" href="/about">About Me</a>
     </nav>
-    <div class="container">
 
-   
+
     {% block body %}
 
     {% endblock %}
-</div>
+
     <hr style="width: 90vw; margin-left: 5vw; margin-top: 6vw;">
     <p class="multi" style="margin-left: 5%; margin-bottom: -10%; font-size: 2vw;">theknightmarketer@gmail.com</p>
     <div class="ani_button" style="justify-content:right; margin-right: 6%; margin-top: -30;">
@@ -233,7 +234,7 @@
                 <p>MAIL ME NOW</p>
             </div>
         </a>
-    
+
     </div>
     <footer>
         <div class="sitemap">
@@ -245,7 +246,7 @@
             </ul>
         </div>
         <div class="contact">
-            
+
             <ul>
                 <li style="color: yellow;"><b>Contact Us</b></li>
                 <li> <a href="tel:+919563432724">
@@ -255,7 +256,7 @@
                 <li><a href="#">Privacy Page</a></li>
             </ul>
         </div>
-      
+
 
     </footer>
     <div>
