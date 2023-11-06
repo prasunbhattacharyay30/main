@@ -119,19 +119,17 @@
             color: aquamarine;
         }
 
-        @media (min-width: 700px) {
-            .container {
-                width: calc(100% - 10vw);
-                /* Adjust the width based on the gap you need */
-                margin: 0 auto;
-                padding: 0 50px;
-                /* Adjust this for the left and right gaps */
-            }
-        }
-
+   .pra {
+    font-size: 9vw;
+   }
+   @media (min-width: 700px) {
+    .pra {
+    font-size: 6vw;
+   }
+   }
         @media (max-width:500px) {
 
-
+   
             .design_child {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
@@ -207,7 +205,7 @@
 
 <body>
     <div id="splash-screen">
-        <h1>PRASUN
+        <h1> <span class="pra">PRASUN</span>
             <br>
         BHATTACHARYAY</h1>
     </div>
