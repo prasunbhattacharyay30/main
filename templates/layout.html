@@ -81,7 +81,7 @@
             line-height: 1.2;
         }
 
-    
+
 
         .multi {
             background-image: linear-gradient(43deg, #d0a541 0%, #C850C0 46%, #FFCC70 100%);
@@ -119,23 +119,27 @@
             color: aquamarine;
         }
 
-   .pra {
-    font-size: 44px;
-   }
-   .bha {
-font-size: 20px;
-   }
-   @media (min-width: 700px) {
-    .pra {
-    font-size: 200px;
-   }
-   .bha {
-    font-size: 92px;
-   }
-   }
+        .pra {
+            font-size: 44px;
+        }
+
+        .bha {
+            font-size: 20px;
+        }
+
+        @media (min-width: 700px) {
+            .pra {
+                font-size: 140px;
+            }
+
+            .bha {
+                font-size: 64px;
+            }
+        }
+
         @media (max-width:500px) {
 
-   
+
             .design_child {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
@@ -211,9 +215,10 @@ font-size: 20px;
 
 <body>
     <div id="splash-screen">
-        <h1> <span class="pra">PRASUN</span>
+        <h1> <span class="pra" >PRASUN</span>
             <br>
-        <span class="bha">BHATTACHARYAY</span></h1>
+            <span class="bha">BHATTACHARYAY</span>
+        </h1>
     </div>
     <nav>
         <a href="/">Home</a>
@@ -226,7 +231,7 @@ font-size: 20px;
     {% block body %}
 
     {% endblock %}
-   
+
     <footer>
         <div class="sitemap">
             <ul>
