@@ -32,21 +32,26 @@
             align-items: center;
             justify-content: space-between;
             padding: 1px 2%;
-            background-color: #4141418c;
+            background-color: #41414148;
         }
 
         nav a {
             color: rgb(255, 255, 255);
-            margin: 1%;
             font-size: small;
             font-style: normal;
             text-decoration: none;
             text-align: center;
+            z-index: 4;
+            padding: 1%;
         }
 
         a:hover {
-            color: rgb(255, 128, 242);
+           
             opacity: 1;
+            background-color: rgb(255, 42, 237);
+            filter: blur(1px);
+            color: rgb(0, 0, 0);
+            border-radius: 20%;
         }
 
         h1,
@@ -62,12 +67,11 @@
         p {
             position: relative;
             font-size: 3vw;
-            margin-left: 2%;
             margin-top: 2%;
             margin-bottom: 2%;
             color: rgb(255, 255, 255);
             text-align: left;
-            line-height: 1.6;
+            line-height: 1.4;
 
         }
 
@@ -137,7 +141,7 @@
             }
         }
 
-        @media (max-width:500px) {
+        @media (max-width:700px) {
 
 
             .design_child {
@@ -176,7 +180,7 @@
             text-decoration: underline;
         }
 
-        @media (min-width:600px) {
+        @media (min-width:700px) {
             body {
                 width: 100%;
             }
