@@ -412,37 +412,6 @@
         transform: translateX(0);
     }
 
-    .bg {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .bg::before {
-        content: '';
-        position: absolute;
-        height: 330px;
-        width: 330px;
-        border-radius: 50%;
-        background: linear-gradient(rgba(249, 70, 160, 0.806), rgb(110, 2, 120));
-        transform: translate(-200px, -250px);
-        opacity: 0.6;
-    }
-
-    .bg::after {
-        content: '';
-        position: absolute;
-        height: 330px;
-        width: 330px;
-        border-radius: 50%;
-        background: linear-gradient(rgba(25, 0, 255, 0.936), rgb(110, 2, 120));
-        transform: translate(200px, 400px);
-        opacity: 0.4;
-    }
-
-
     .ball_2 {
         height: 130vw;
         width: 80vw;
@@ -823,10 +792,6 @@
     }
 
     @media (max-width:700px) {
-        .section_1_items.animate h1 {
-            text-align: left;
-            font-size: 10vw;
-        }
 
         .section_6,
         .canva,
@@ -860,7 +825,7 @@
         }
 
         .section_1_items.animate h1 {
-            font-size: 4.1vw;
+            font-size: 4vw;
 
         }
 
@@ -888,28 +853,7 @@
             transform: translate(-120vw, -8vw);
         }
 
-
-        .ball_1m {
-            height: 100vw;
-            width: 60vw;
-            border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
-            background-color: #4b074e;
-            transform: translate(-0px, -233vw);
-            position: absolute;
-            opacity: 0.8;
-            z-index: 0;
-        }
-
-        .ball_2m {
-            height: 100vw;
-            width: 60vw;
-            border-radius: 0% 100% 100% 0% / 0% 48% 39% 0%;
-            background-color: #3f0255;
-            transform: translate(-0px, -233vw);
-            position: absolute;
-            opacity: 0.8;
-            z-index: 0;
-        }
+    
 
         .ball_3m {
             height: 160vw;
@@ -1058,24 +1002,6 @@
 
     }
 
-    .onl {
-        animation: onl 6s infinite;
-    }
-
-    @keyframes onl {
-        0% {
-            color: white;
-        }
-
-        50% {
-            color: yellow;
-        }
-
-        100% {
-            color: white;
-        }
-    }
-
     html {
         scroll-behavior: smooth;
     }
@@ -1096,7 +1022,7 @@
                     <div class="section_1_items">
                         <h1>EASY TO DOUBLE YOUR BUSINESS ONLINE!
                         </h1>
-                        <p class="s2" style=" opacity: 0.9;">I Will Help Your Brand To Stand Out With A Proven
+                        <p style=" opacity: 0.9;">I Will Help Your Brand To Stand Out With A Proven
                             Strategy. I'll Boost Your <span style="color: yellow;"><b>ROI, Brand Reach,</b></span> And
                             <span style="color: yellow;"><b>Identity.</b></span> Don't Be So Late To Take Action
                             Online.</p>

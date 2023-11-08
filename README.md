@@ -51,6 +51,10 @@ The project embodies a well-structured framework to effectively represent Prasun
 
 ---
 
+### Revision Policy
+Two (2) revisions are free of charge. Subsequent revisions will be subject to additional charges.
+
+
 ### Developer
 Shah Rukh Rao
 
