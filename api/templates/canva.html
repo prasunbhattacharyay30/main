@@ -1,5 +1,40 @@
 {% extends 'layout.html'%}
+{% block head %}
+<style>
+    .design {
+        width: 92%;
+        margin-left: 3.6%;
+    }
 
+    .design_child,
+    .footer {
+        margin: 2%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    }
+
+    .design_items {
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .design_items img {
+        width: 42.5vw;
+        margin: 2%;
+
+    }
+
+    .design_see_more {
+        text-align: right;
+        margin: 2%;
+        padding: 2%;
+        color: aquamarine;
+    }
+    .work, .canva2 {
+        display: none;
+    }
+</style>
+{% endblock %}
 {% block body %}
 <div class="design">
     <h1 style="text-align: center;  z-index: 8; margin-top:8% ;">My Canva Design Sample</h1>
@@ -8,16 +43,16 @@
             <img src="/static/Design1.png" loading="lazy" alt="">
         </div>
         <div class="design_items">
-            <img src="/static/Design2.png"  loading="lazy" alt="">
+            <img src="/static/Design2.png" loading="lazy" alt="">
         </div>
         <div class="design_items">
             <img src="/static/Design3.png" loading="lazy" alt="">
         </div>
         <div class="design_items">
-            <img src="/static/Design4.png" loading="lazy"  alt="">
+            <img src="/static/Design4.png" loading="lazy" alt="">
         </div>
         <div class="design_items">
-            <img src="/static/Design5.png"loading="lazy"  alt="">
+            <img src="/static/Design5.png" loading="lazy" alt="">
         </div>
         <div class="design_items">
             <img src="/static/Design6.png" loading="lazy" alt="">
@@ -47,4 +82,4 @@
             <img src="/static/Design14.png" loading="lazy" alt="">
         </div>
     </div>
-{% endblock %}
+    {% endblock %}

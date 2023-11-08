@@ -110,11 +110,6 @@
         text-align: left;
     }
 
-    .section_1_items.animate h2 {
-        animation: h1tag 4s;
-        text-align: left;
-    }
-
     @keyframes h1tag {
         0% {
             transform: translateX(-100vw);
@@ -129,26 +124,25 @@
         }
     }
 
-    .section_1_items.animate .p1 {
-        animation: ptag 5s;
+    .section_1_items.animate .p1,
+    .section_1_items.animate .p2,
+    .section_1_items.animate .p3 {
         font-size: 1.4vw;
         margin: 0%;
         margin-top: 0%;
         opacity: 0.9;
     }
 
+    .section_1_items.animate .p1 {
+        animation: ptag 5s;
+    }
+
     .section_1_items.animate .p2 {
         animation: ptag 6s;
-        font-size: 1.4vw;
-        margin: 0%;
-        opacity: 0.9;
     }
 
     .section_1_items.animate .p3 {
         animation: ptag 7s;
-        font-size: 1.4vw;
-        margin: 0%;
-        opacity: 0.9;
         margin-bottom: 4%;
     }
 
@@ -166,47 +160,12 @@
         }
     }
 
-    .section_1_items.animate .start {
-        text-align: center;
-        font-size: 4vw;
-        padding: 2%;
-        opacity: .9;
-        animation: h2r 5s;
-        margin-top: 8%;
-        color: yellow;
-        margin-bottom: 3%;
-    }
-
-    @keyframes h2r {
-        0% {
-            transform: translateX(-100vw);
-            opacity: 0;
-        }
-
-        20% {
-            transform: translateX(-100vw);
-            opacity: 0;
-        }
-
-        70% {
-            transform: translateX(30vw);
-        }
-
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-    }
-
     .section_1 {
         max-width: 45vw;
         margin: 0 auto;
         margin-top: 2%;
         margin-left: 6%;
     }
-
-
 
     .btn {
         background-color: #ffffff;
@@ -221,7 +180,6 @@
         font-size: 2.8vw;
 
     }
-
 
     .ani_button {
         display: flex;
@@ -268,7 +226,7 @@
             width: 30vw;
         }
 
-       
+
 
         .ani_btn::after {
             inset: 1px;
@@ -329,11 +287,7 @@
         color: #fff;
     }
 
-    @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-    @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-
-
-
+   
     .section_6 {
         border: 2px solid #4d1044d0;
         width: 80vw;
@@ -458,30 +412,6 @@
         transform: translateX(0);
     }
 
-    @media screen and (max-width: 100px) {
-
-        body {
-            margin: 0;
-        }
-
-        .accordion {
-            height: auto;
-        }
-
-        .accordion ul li,
-        .accordion ul li:hover,
-        .accordion ul:hover li,
-        .accordion ul:hover li:hover {
-            position: relative;
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-            -webkit-transition: none;
-            transition: none;
-        }
-    }
-
-
     .bg {
         position: relative;
         display: flex;
@@ -512,17 +442,6 @@
         opacity: 0.4;
     }
 
-    .ball_3 {
-        height: 80vw;
-        width: 80vw;
-        border-radius: 90% 10% 41% 31% / 83% 10% 86% 32%;
-        background-color: #3f0255;
-        transform: translate(-20vw, -30vw);
-        position: absolute;
-        opacity: 0.8;
-        filter: blur(6vw);
-        z-index: 0;
-    }
 
     .ball_2 {
         height: 130vw;
@@ -536,38 +455,6 @@
         z-index: 0;
     }
 
-    .ball_1 {
-        height: 40vw;
-        width: 60vw;
-        border-radius: 0% 100% 100% 0% / 0% 68% 69% 0%;
-        background-color: #4b074e;
-        transform: translate(-30px, -20vw);
-        position: absolute;
-        opacity: 0.8;
-        z-index: 0;
-    }
-
-    .ball_4 {
-        height: 20vw;
-        width: 50vw;
-        border-radius: 1% 0% 0% 60% / 40% 0% 0% 40%;
-        background-color: #4b074e;
-        transform: translate(60vw, -30vw);
-        position: absolute;
-        opacity: 0.8;
-        z-index: 0;
-    }
-
-    .ball_5 {
-        height: 40vw;
-        width: 60vw;
-        border-radius: 50%;
-        background-color: #4b074e;
-        transform: translate(-30px, -20vw);
-        position: absolute;
-        opacity: 0.8;
-        z-index: 0;
-    }
 
     .right-content img {
         display: none;
@@ -903,12 +790,14 @@
             width: 55vw;
             font-size: 4vw;
             font-weight: 900;
-         
+
         }
+
         .section_1_items p {
             font-size: 1.4vw;
             margin-left: 0vw;
         }
+
         .section_1_items span {
             font-weight: 900;
         }
@@ -968,13 +857,13 @@
             font-weight: 400;
             text-align: left;
             text-transform: capitalize;
-            line-height: 1.2;
         }
 
         .section_1_items.animate h1 {
             font-size: 4.1vw;
-           
+
         }
+
         .section_1_items.animate .p,
         .section_1_items.animate .p1,
         .section_1_items.animate .p2,
@@ -1060,6 +949,7 @@
 
             font-size: 3vw;
         }
+
         .ani_btn p {
             font-size: 2.2vw;
         }
@@ -1207,12 +1097,16 @@
                         <h1>EASY TO DOUBLE YOUR BUSINESS ONLINE!
                         </h1>
                         <p class="s2" style=" opacity: 0.9;">I Will Help Your Brand To Stand Out With A Proven
-                            Strategy. I'll Boost Your <span style="color: yellow;"><b>ROI, Brand Reach,</b></span> And <span style="color: yellow;"><b>Identity.</b></span>  Don't Be So Late To Take Action
+                            Strategy. I'll Boost Your <span style="color: yellow;"><b>ROI, Brand Reach,</b></span> And
+                            <span style="color: yellow;"><b>Identity.</b></span> Don't Be So Late To Take Action
                             Online.</p>
-                        <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Looking For Digital Marketer ?</p>
-                        <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is Your Ad Performing Well ?
+                        <p class="p1"> <span style="color: yellow; font-size:2.2vw;"> &#187;</span> Looking For Digital
+                            Marketer ?</p>
+                        <p class="p2"> <span style="color:yellow; font-size:2.2vw;"> &#187;</span> Is Your Ad Performing
+                            Well ?
                         </p>
-                        <p class="p3"> <span style="color: yellow; font-size:2.2vw;">&#187;</span> What About Your Brand Visibility ?</p>
+                        <p class="p3"> <span style="color: yellow; font-size:2.2vw;">&#187;</span> What About Your
+                            Brand Visibility ?</p>
                     </div>
                 </div>
             </section>
@@ -1424,7 +1318,7 @@
 
 </script>
 <button id="prevButton"
-    style="transform: translate(-3vw, 40vw); width: 2vw; height: 2vw; border-radius: 50%; opacity: .8; cursor:context-menu; background-color: yellow;  z-index: 4; "><span ><b>
+    style="transform: translate(-3vw, 40vw); width: 2vw; height: 2vw; border-radius: 50%; opacity: .8; cursor:context-menu; background-color: yellow;  z-index: 4; "><span><b>
             < </b></span></button>
 <div class="section_3">
 
@@ -1517,7 +1411,7 @@
                 you an idea about "How to deal with Digital marketing approach."
 
             </p>
-            <div  style="margin-left: 0%;" class="ani_button">
+            <div style="margin-left: 0%;" class="ani_button">
                 <a href="tel:+919563432724">
                     <div class="ani_btn">
                         <p>CALL ME NOW</p>
@@ -1609,7 +1503,7 @@
 
 <div class="canva">
     <div class="canva_items">
-        <img  loading="lazy" src="/static/canva.png" alt="">
+        <img loading="lazy" src="/static/canva.png" alt="">
     </div>
     <div class="canva_items">
 
@@ -1774,7 +1668,7 @@
 </script>
 
 <h1 style="margin-left: 5%; font-weight: 200; font-size: 4vw; margin-top: 4%; margin-bottom: -4%;"><b>Let's grow
-    together !</b></h1>
+        together !</b></h1>
 <hr style="width: 90vw; margin-left: 5vw; margin-top: 6vw;">
 <p class="multi" style="margin-left: 5%; margin-bottom: -10%; font-size: 2vw;">theknightmarketer@gmail.com</p>
 <div class="ani_button" style="justify-content:right; margin-right: 6%; margin-top: -30;">
